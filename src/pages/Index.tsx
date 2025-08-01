@@ -16,12 +16,12 @@ const Index = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Automatiza llamadas y WhatsApps con un agente entrenado con datos reales de la industria veterinaria.
+            Automatiza llamadas y mensajes con un agente entrenado en el lenguaje real de la industria veterinaria.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg">
-              Quiero activarlo en mi clínica
+              Activar mi agente en 24h
             </Button>
             <Button variant="outline" size="lg" className="px-8 py-4 text-lg border-2">
               Soy una marca, quiero patrocinar clínicas
@@ -176,8 +176,7 @@ const Index = () => {
                     Integración Total
                   </h3>
                   <p className="text-blue-100 mb-6">
-                    <strong>Nuestro diferencial:</strong> No es una IA por canal, 
-                    es una IA integrada por proceso. Gestiona toda la experiencia del cliente.
+                    <strong>Nuestro diferencial:</strong> una sola IA que cubre todo el proceso, no bots aislados por canal. Atiende, escala y resuelve sin descoordinación.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
@@ -201,7 +200,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              ¿Por qué no usar un <span className="text-orange-600">bot genérico</span>?
+              ¿Por qué un <span className="text-orange-600">agente genérico</span> no es suficiente?
             </h2>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -216,7 +215,7 @@ const Index = () => {
                     <Shield className="h-12 w-12 mx-auto" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Entrenado con productos reales
+                    Entrenado con datos reales del sector
                   </h3>
                   <p className="text-gray-600 text-sm">
                     Conoce marcas, dosis, indicaciones específicas del sector
@@ -230,7 +229,7 @@ const Index = () => {
                     <CheckCircle className="h-12 w-12 mx-auto" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Validado por marcas veterinarias
+                    Validado por marcas líderes del sector
                   </h3>
                   <p className="text-gray-600 text-sm">
                     Información verificada y actualizada constantemente
@@ -244,10 +243,10 @@ const Index = () => {
                     <Users className="h-12 w-12 mx-auto" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Adaptado al flujo operativo
+                    Se adapta a tu flujo actual, sin cambios drásticos
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    Se integra con tu proceso actual sin cambios drásticos
+                    Se integra con tu proceso actual sin modificaciones complejas
                   </p>
                 </CardContent>
               </Card>
@@ -303,6 +302,33 @@ const Index = () => {
                   Veterinaria Los Andes
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Barra de Confianza */}
+      <section className="bg-slate-100 py-8">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center items-center gap-8 text-center text-gray-700">
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-blue-600">+100</span>
+              <span className="text-sm">clínicas activas</span>
+            </div>
+            <div className="hidden md:block w-px h-8 bg-gray-300"></div>
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-green-600">+40%</span>
+              <span className="text-sm">ventas en promedio</span>
+            </div>
+            <div className="hidden md:block w-px h-8 bg-gray-300"></div>
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-purple-600">24h</span>
+              <span className="text-sm">activación</span>
+            </div>
+            <div className="hidden md:block w-px h-8 bg-gray-300"></div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-green-600" />
+              <span className="text-sm">reducción de carga operativa</span>
             </div>
           </div>
         </div>
