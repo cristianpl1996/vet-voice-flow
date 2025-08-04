@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, MessageSquare, Phone, Users, Zap, Shield } from "lucide-react";
+import { CheckCircle, MessageSquare, Phone, Users, Zap, Shield, Building2, TrendingUp, Clock } from "lucide-react";
 
 const Index = () => {
   return (
@@ -50,7 +50,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="font-heading text-4xl md:text-5xl font-black text-hero-bg">
-              ¿Tu recepción está <span className="text-destructive">colapsada</span>?
+              ¿Tu recepción está <span className="text-secondary">colapsada</span>?
             </h2>
             
             <p className="font-body text-xl text-foreground-muted max-w-3xl mx-auto leading-relaxed">
@@ -60,10 +60,10 @@ const Index = () => {
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 pt-12">
-              <Card className="border-destructive/30 bg-destructive/5 shadow-lg">
+              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
                 <CardContent className="p-6 text-center">
-                  <div className="text-destructive mb-4">
-                    <Phone className="h-12 w-12 mx-auto drop-shadow-md" />
+                  <div className="text-primary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
+                    <Phone className="h-12 w-12 drop-shadow-md" />
                   </div>
                   <h3 className="font-heading text-lg font-bold text-hero-bg mb-2">
                     Pierdes ventas por falta de respuesta oportuna
@@ -71,10 +71,10 @@ const Index = () => {
                 </CardContent>
               </Card>
               
-              <Card className="border-destructive/30 bg-destructive/5 shadow-lg">
+              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
                 <CardContent className="p-6 text-center">
-                  <div className="text-destructive mb-4">
-                    <Users className="h-12 w-12 mx-auto drop-shadow-md" />
+                  <div className="text-secondary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
+                    <Users className="h-12 w-12 drop-shadow-md" />
                   </div>
                   <h3 className="font-heading text-lg font-bold text-hero-bg mb-2">
                     El tutor percibe un mal servicio
@@ -82,10 +82,10 @@ const Index = () => {
                 </CardContent>
               </Card>
               
-              <Card className="border-destructive/30 bg-destructive/5 shadow-lg">
+              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
                 <CardContent className="p-6 text-center">
-                  <div className="text-destructive mb-4">
-                    <Zap className="h-12 w-12 mx-auto drop-shadow-md" />
+                  <div className="text-primary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
+                    <Zap className="h-12 w-12 drop-shadow-md" />
                   </div>
                   <h3 className="font-heading text-lg font-bold text-hero-bg mb-2">
                     Tu equipo está saturado
@@ -209,7 +209,7 @@ const Index = () => {
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 pt-12">
-              <Card className="border-primary/30 bg-primary/5 shadow-lg">
+              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
                 <CardContent className="p-6 text-center">
                   <div className="text-primary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
                     <Shield className="h-12 w-12 drop-shadow-md" />
@@ -223,9 +223,9 @@ const Index = () => {
                 </CardContent>
               </Card>
               
-              <Card className="border-primary/30 bg-primary/5 shadow-lg">
+              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
                 <CardContent className="p-6 text-center">
-                  <div className="text-primary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
+                  <div className="text-secondary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
                     <CheckCircle className="h-12 w-12 drop-shadow-md" />
                   </div>
                   <h3 className="font-heading text-lg font-bold text-hero-bg mb-2">
@@ -237,7 +237,7 @@ const Index = () => {
                 </CardContent>
               </Card>
               
-              <Card className="border-primary/30 bg-primary/5 shadow-lg">
+              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
                 <CardContent className="p-6 text-center">
                   <div className="text-primary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
                     <Users className="h-12 w-12 drop-shadow-md" />
@@ -264,71 +264,80 @@ const Index = () => {
             </h2>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-card p-6 rounded-xl shadow-xl border border-border/50">
-                <div className="text-primary text-4xl mb-4 font-bold">"</div>
-                <p className="font-body text-foreground-muted mb-4">
-                  "Nuestro equipo puede enfocarse en lo médico mientras el agente maneja las consultas básicas perfectamente."
-                </p>
-                <div className="font-heading font-bold text-hero-bg">
-                  Dr. María González
-                </div>
-                <div className="text-sm text-foreground-muted">
-                  Clínica Veterinaria San Martín
-                </div>
-              </div>
+              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
+                <CardContent className="p-6 rounded-xl">
+                  <div className="text-primary text-4xl mb-4 font-bold">"</div>
+                  <p className="font-body text-foreground-muted mb-4">
+                    "Nuestro equipo puede enfocarse en lo médico mientras el agente maneja las consultas básicas perfectamente."
+                  </p>
+                  <div className="font-heading font-bold text-hero-bg">
+                    Dr. María González
+                  </div>
+                  <div className="text-sm text-foreground-muted">
+                    Clínica Veterinaria San Martín
+                  </div>
+                </CardContent>
+              </Card>
               
-              <div className="bg-card p-6 rounded-xl shadow-xl border border-border/50">
-                <div className="text-secondary text-4xl mb-4 font-bold">"</div>
-                <p className="font-body text-foreground-muted mb-4">
-                  "Las ventas aumentaron 40% al no perder ninguna consulta. Los clientes están más satisfechos."
-                </p>
-                <div className="font-heading font-bold text-hero-bg">
-                  Lic. Carlos Ruiz
-                </div>
-                <div className="text-sm text-foreground-muted">
-                  PetCare Centro
-                </div>
-              </div>
+              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
+                <CardContent className="p-6 rounded-xl">
+                  <div className="text-secondary text-4xl mb-4 font-bold">"</div>
+                  <p className="font-body text-foreground-muted mb-4">
+                    "Las ventas aumentaron 40% al no perder ninguna consulta. Los clientes están más satisfechos."
+                  </p>
+                  <div className="font-heading font-bold text-hero-bg">
+                    Lic. Carlos Ruiz
+                  </div>
+                  <div className="text-sm text-foreground-muted">
+                    PetCare Centro
+                  </div>
+                </CardContent>
+              </Card>
               
-              <div className="bg-card p-6 rounded-xl shadow-xl border border-border/50">
-                <div className="text-primary text-4xl mb-4 font-bold">"</div>
-                <p className="font-body text-foreground-muted mb-4">
-                  "La diferencia es increíble. Habla como nosotros, conoce nuestros productos y procesos."
-                </p>
-                <div className="font-heading font-bold text-hero-bg">
-                  Dra. Ana López
-                </div>
-                <div className="text-sm text-foreground-muted">
-                  Veterinaria Los Andes
-                </div>
-              </div>
+              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
+                <CardContent className="p-6 rounded-xl">
+                  <div className="text-primary text-4xl mb-4 font-bold">"</div>
+                  <p className="font-body text-foreground-muted mb-4">
+                    "La diferencia es increíble. Habla como nosotros, conoce nuestros productos y procesos."
+                  </p>
+                  <div className="font-heading font-bold text-hero-bg">
+                    Dra. Ana López
+                  </div>
+                  <div className="text-sm text-foreground-muted">
+                    Veterinaria Los Andes
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
       </section>
 
       {/* Barra de Confianza */}
-      <section className="bg-hero-bg py-8">
+      <section className="bg-hero-bg py-16">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center items-center gap-8 text-center">
-            <div className="flex items-center gap-2">
-              <span className="font-heading font-bold text-primary">+100</span>
-              <span className="text-sm text-foreground-alt">clínicas activas</span>
+          <div className="flex flex-wrap justify-center items-center gap-12 text-center">
+            <div className="flex items-center gap-3">
+              <Building2 className="h-6 w-6 text-primary" />
+              <span className="font-heading font-bold text-primary text-xl">+100</span>
+              <span className="text-foreground-alt">clínicas activas</span>
             </div>
-            <div className="hidden md:block w-px h-8 bg-foreground-muted/30"></div>
-            <div className="flex items-center gap-2">
-              <span className="font-heading font-bold text-secondary">+40%</span>
-              <span className="text-sm text-foreground-alt">ventas en promedio</span>
+            <div className="hidden md:block w-px h-12 bg-foreground-muted/30"></div>
+            <div className="flex items-center gap-3">
+              <TrendingUp className="h-6 w-6 text-secondary" />
+              <span className="font-heading font-bold text-secondary text-xl">+40%</span>
+              <span className="text-foreground-alt">ventas en promedio</span>
             </div>
-            <div className="hidden md:block w-px h-8 bg-foreground-muted/30"></div>
-            <div className="flex items-center gap-2">
-              <span className="font-heading font-bold text-primary">24h</span>
-              <span className="text-sm text-foreground-alt">activación</span>
+            <div className="hidden md:block w-px h-12 bg-foreground-muted/30"></div>
+            <div className="flex items-center gap-3">
+              <Clock className="h-6 w-6 text-primary" />
+              <span className="font-heading font-bold text-primary text-xl">24h</span>
+              <span className="text-foreground-alt">activación</span>
             </div>
-            <div className="hidden md:block w-px h-8 bg-foreground-muted/30"></div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-secondary" />
-              <span className="text-sm text-foreground-alt">reducción de carga operativa</span>
+            <div className="hidden md:block w-px h-12 bg-foreground-muted/30"></div>
+            <div className="flex items-center gap-3">
+              <CheckCircle className="h-6 w-6 text-secondary" />
+              <span className="text-foreground-alt">reducción de carga operativa</span>
             </div>
           </div>
         </div>
