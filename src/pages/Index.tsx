@@ -117,51 +117,51 @@ const Index = () => {
             </div>
             
             <div className="grid lg:grid-cols-3 gap-8">
-              <Card className="bg-card shadow-xl border-border/50">
+              <Card className="bg-gradient-primary text-white shadow-xl">
                 <CardContent className="p-8">
-                  <div className="text-primary mb-6 bg-gradient-to-br from-primary/10 to-secondary/10 p-4 rounded-xl shadow-inner">
+                  <div className="text-white mb-6 bg-white/10 p-4 rounded-xl shadow-inner">
                     <MessageSquare className="h-16 w-16 drop-shadow-lg" />
                   </div>
-                  <h3 className="font-heading text-2xl font-bold text-hero-bg mb-4">
+                  <h3 className="font-heading text-2xl font-bold mb-4">
                     Agente de WhatsApp
                   </h3>
-                  <p className="font-body text-foreground-muted mb-6">
+                  <p className="text-white/90 mb-6">
                     Conversación fluida, personalizada y rápida. Resuelve consultas sobre servicios, 
                     precios, disponibilidad y agenda citas de forma natural.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary" />
-                      <span className="text-sm text-foreground-muted">Respuestas instantáneas</span>
+                      <CheckCircle className="h-5 w-5 text-white/80" />
+                      <span className="text-sm text-white/80">Respuestas instantáneas</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary" />
-                      <span className="text-sm text-foreground-muted">Agenda citas automáticamente</span>
+                      <CheckCircle className="h-5 w-5 text-white/80" />
+                      <span className="text-sm text-white/80">Agenda citas automáticamente</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
               
-              <Card className="bg-card shadow-xl border-border/50">
+              <Card className="bg-gradient-primary text-white shadow-xl">
                 <CardContent className="p-8">
-                  <div className="text-secondary mb-6 bg-gradient-to-br from-primary/10 to-secondary/10 p-4 rounded-xl shadow-inner">
+                  <div className="text-white mb-6 bg-white/10 p-4 rounded-xl shadow-inner">
                     <Phone className="h-16 w-16 drop-shadow-lg" />
                   </div>
-                  <h3 className="font-heading text-2xl font-bold text-hero-bg mb-4">
+                  <h3 className="font-heading text-2xl font-bold mb-4">
                     Agente de Voz
                   </h3>
-                  <p className="font-body text-foreground-muted mb-6">
+                  <p className="text-white/90 mb-6">
                     Atiende llamadas como un asistente real y dispara flujos posteriores 
                     por WhatsApp para dar seguimiento personalizado.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary" />
-                      <span className="text-sm text-foreground-muted">Voz natural y profesional</span>
+                      <CheckCircle className="h-5 w-5 text-white/80" />
+                      <span className="text-sm text-white/80">Voz natural y profesional</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="h-5 w-5 text-primary" />
-                      <span className="text-sm text-foreground-muted">Seguimiento automático</span>
+                      <CheckCircle className="h-5 w-5 text-white/80" />
+                      <span className="text-sm text-white/80">Seguimiento automático</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -348,7 +348,7 @@ const Index = () => {
             </p>
             
             <div className="pt-8">
-              <Button size="lg" variant="secondary" className="px-12 py-4 text-lg font-semibold">
+              <Button size="lg" className="px-12 py-4 text-lg font-semibold">
                 Agendar activación
               </Button>
             </div>
