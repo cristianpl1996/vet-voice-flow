@@ -18,12 +18,20 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'heading': ['Inter', 'sans-serif'],
+				'body': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
+				'background-alt': 'hsl(var(--background-alt))',
 				foreground: 'hsl(var(--foreground))',
+				'foreground-alt': 'hsl(var(--foreground-alt))',
+				'foreground-muted': 'hsl(var(--foreground-muted))',
+				'hero-bg': 'hsl(var(--hero-background))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -62,6 +70,9 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
