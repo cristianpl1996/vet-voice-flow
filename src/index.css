@@ -15,21 +15,24 @@ All colors MUST be HSL.
     --foreground: 0 0% 100%; /* white */
     --foreground-alt: 220 9% 89%; /* #E5E7EB */
     --foreground-muted: 220 14% 64%; /* #9CA3AF */
+    --text-dark: 222 47% 11%; /* #111827 - texto oscuro para fondos claros */
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 9% 89%;
+    --card: 0 0% 100%; /* blanco puro para tarjetas */
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 9% 89%;
+    --popover-foreground: 222 47% 11%;
 
     /* Better Code Brand Colors */
     --primary: 194 100% 44%; /* #009EE2 */
     --primary-foreground: 0 0% 100%;
     --secondary: 306 70% 49%; /* #CC2FC6 */
     --secondary-foreground: 0 0% 100%;
+    --integration-color: 262 83% 58%; /* #6B21A8 */
     
-    /* Button Gradient */
+    /* Button Gradients */
     --gradient-primary: linear-gradient(90deg, hsl(194 100% 44%), hsl(306 70% 49%));
+    --gradient-secondary-bg: 222 47% 11%; /* #111827 para botón secundario */
     
     --muted: 0 0% 98%;
     --muted-foreground: 220 14% 64%;

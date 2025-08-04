@@ -23,7 +23,7 @@ const Index = () => {
             <Button size="lg" className="px-8 py-4 text-lg">
               Activar mi agente en 24h
             </Button>
-            <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
+            <Button variant="secondary" size="lg" className="px-8 py-4 text-lg">
               Soy una marca, quiero patrocinar clínicas
             </Button>
           </div>
@@ -49,7 +49,7 @@ const Index = () => {
       <section className="bg-background py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="font-heading text-4xl md:text-5xl font-black text-hero-bg">
+            <h2 className="font-heading text-4xl md:text-5xl font-black text-text-dark">
               ¿Tu recepción está <span className="text-secondary">colapsada</span>?
             </h2>
             
@@ -60,34 +60,34 @@ const Index = () => {
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 pt-12">
-              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
+              <Card className="bg-card border border-border/30 shadow-lg">
                 <CardContent className="p-6 text-center">
                   <div className="text-primary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
                     <Phone className="h-12 w-12 drop-shadow-md" />
                   </div>
-                  <h3 className="font-heading text-lg font-bold text-hero-bg mb-2">
+                  <h3 className="font-heading text-lg font-bold text-text-dark mb-2">
                     Pierdes ventas por falta de respuesta oportuna
                   </h3>
                 </CardContent>
               </Card>
               
-              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
+              <Card className="bg-card border border-border/30 shadow-lg">
                 <CardContent className="p-6 text-center">
                   <div className="text-secondary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
                     <Users className="h-12 w-12 drop-shadow-md" />
                   </div>
-                  <h3 className="font-heading text-lg font-bold text-hero-bg mb-2">
+                  <h3 className="font-heading text-lg font-bold text-text-dark mb-2">
                     El tutor percibe un mal servicio
                   </h3>
                 </CardContent>
               </Card>
               
-              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
+              <Card className="bg-card border border-border/30 shadow-lg">
                 <CardContent className="p-6 text-center">
-                  <div className="text-primary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
+                  <div className="text-integration mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
                     <Zap className="h-12 w-12 drop-shadow-md" />
                   </div>
-                  <h3 className="font-heading text-lg font-bold text-hero-bg mb-2">
+                  <h3 className="font-heading text-lg font-bold text-text-dark mb-2">
                     Tu equipo está saturado
                   </h3>
                 </CardContent>
@@ -102,7 +102,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center space-y-8 mb-16">
-              <h2 className="font-heading text-4xl md:text-5xl font-black text-hero-bg">
+              <h2 className="font-heading text-4xl md:text-5xl font-black text-text-dark">
                 Agentes inteligentes entrenados con el{" "}
                 <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   lenguaje de la industria
@@ -120,7 +120,7 @@ const Index = () => {
               <Card className="bg-gradient-primary text-white shadow-xl">
                 <CardContent className="p-8">
                   <div className="text-white mb-6 bg-white/10 p-4 rounded-xl shadow-inner">
-                    <MessageSquare className="h-16 w-16 drop-shadow-lg" />
+                    <MessageSquare className="h-16 w-16 drop-shadow-lg text-primary" />
                   </div>
                   <h3 className="font-heading text-2xl font-bold mb-4">
                     Agente de WhatsApp
@@ -145,7 +145,7 @@ const Index = () => {
               <Card className="bg-gradient-primary text-white shadow-xl">
                 <CardContent className="p-8">
                   <div className="text-white mb-6 bg-white/10 p-4 rounded-xl shadow-inner">
-                    <Phone className="h-16 w-16 drop-shadow-lg" />
+                    <Phone className="h-16 w-16 drop-shadow-lg text-secondary" />
                   </div>
                   <h3 className="font-heading text-2xl font-bold mb-4">
                     Agente de Voz
@@ -170,7 +170,7 @@ const Index = () => {
               <Card className="bg-gradient-primary text-white shadow-xl">
                 <CardContent className="p-8">
                   <div className="text-white mb-6 bg-white/10 p-4 rounded-xl shadow-inner">
-                    <Zap className="h-16 w-16 drop-shadow-lg" />
+                    <Zap className="h-16 w-16 drop-shadow-lg text-integration" />
                   </div>
                   <h3 className="font-heading text-2xl font-bold mb-4">
                     Integración Total
@@ -199,7 +199,7 @@ const Index = () => {
       <section className="bg-background py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="font-heading text-4xl md:text-5xl font-black text-hero-bg">
+            <h2 className="font-heading text-4xl md:text-5xl font-black text-text-dark">
               ¿Por qué un <span className="text-pink-400">agente genérico</span> no es suficiente?
             </h2>
             
@@ -209,12 +209,12 @@ const Index = () => {
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 pt-12">
-              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
+              <Card className="bg-card border border-border/30 shadow-lg">
                 <CardContent className="p-6 text-center">
                   <div className="text-primary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
                     <Shield className="h-12 w-12 drop-shadow-md" />
                   </div>
-                  <h3 className="font-heading text-lg font-bold text-hero-bg mb-2">
+                  <h3 className="font-heading text-lg font-bold text-text-dark mb-2">
                     Entrenado con datos reales del sector
                   </h3>
                   <p className="font-body text-foreground-muted text-sm">
@@ -223,12 +223,12 @@ const Index = () => {
                 </CardContent>
               </Card>
               
-              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
+              <Card className="bg-card border border-border/30 shadow-lg">
                 <CardContent className="p-6 text-center">
                   <div className="text-secondary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
                     <CheckCircle className="h-12 w-12 drop-shadow-md" />
                   </div>
-                  <h3 className="font-heading text-lg font-bold text-hero-bg mb-2">
+                  <h3 className="font-heading text-lg font-bold text-text-dark mb-2">
                     Validado por marcas líderes del sector
                   </h3>
                   <p className="font-body text-foreground-muted text-sm">
@@ -237,12 +237,12 @@ const Index = () => {
                 </CardContent>
               </Card>
               
-              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
+              <Card className="bg-card border border-border/30 shadow-lg">
                 <CardContent className="p-6 text-center">
-                  <div className="text-primary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
+                  <div className="text-integration mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
                     <Users className="h-12 w-12 drop-shadow-md" />
                   </div>
-                  <h3 className="font-heading text-lg font-bold text-hero-bg mb-2">
+                  <h3 className="font-heading text-lg font-bold text-text-dark mb-2">
                     Se adapta a tu flujo actual, sin cambios drásticos
                   </h3>
                   <p className="font-body text-foreground-muted text-sm">
@@ -259,18 +259,18 @@ const Index = () => {
       <section className="bg-background-alt py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-heading text-3xl font-black text-hero-bg mb-12">
+            <h2 className="font-heading text-3xl font-black text-text-dark mb-12">
               Clínicas que ya confían en nosotros
             </h2>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
+              <Card className="bg-card border border-border/30 shadow-lg">
                 <CardContent className="p-6 rounded-xl">
                   <div className="text-primary text-4xl mb-4 font-bold">"</div>
                   <p className="font-body text-foreground-muted mb-4">
                     "Nuestro equipo puede enfocarse en lo médico mientras el agente maneja las consultas básicas perfectamente."
                   </p>
-                  <div className="font-heading font-bold text-hero-bg">
+                  <div className="font-heading font-bold text-text-dark">
                     Dr. María González
                   </div>
                   <div className="text-sm text-foreground-muted">
@@ -279,13 +279,13 @@ const Index = () => {
                 </CardContent>
               </Card>
               
-              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
+              <Card className="bg-card border border-border/30 shadow-lg">
                 <CardContent className="p-6 rounded-xl">
                   <div className="text-secondary text-4xl mb-4 font-bold">"</div>
                   <p className="font-body text-foreground-muted mb-4">
                     "Las ventas aumentaron 40% al no perder ninguna consulta. Los clientes están más satisfechos."
                   </p>
-                  <div className="font-heading font-bold text-hero-bg">
+                  <div className="font-heading font-bold text-text-dark">
                     Lic. Carlos Ruiz
                   </div>
                   <div className="text-sm text-foreground-muted">
@@ -294,13 +294,13 @@ const Index = () => {
                 </CardContent>
               </Card>
               
-              <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/20 shadow-xl">
+              <Card className="bg-card border border-border/30 shadow-lg">
                 <CardContent className="p-6 rounded-xl">
                   <div className="text-primary text-4xl mb-4 font-bold">"</div>
                   <p className="font-body text-foreground-muted mb-4">
                     "La diferencia es increíble. Habla como nosotros, conoce nuestros productos y procesos."
                   </p>
-                  <div className="font-heading font-bold text-hero-bg">
+                  <div className="font-heading font-bold text-text-dark">
                     Dra. Ana López
                   </div>
                   <div className="text-sm text-foreground-muted">

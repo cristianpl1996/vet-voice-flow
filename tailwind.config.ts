@@ -31,7 +31,9 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				'foreground-alt': 'hsl(var(--foreground-alt))',
 				'foreground-muted': 'hsl(var(--foreground-muted))',
+				'text-dark': 'hsl(var(--text-dark))',
 				'hero-bg': 'hsl(var(--hero-background))',
+				'integration': 'hsl(var(--integration-color))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
