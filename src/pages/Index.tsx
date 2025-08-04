@@ -119,7 +119,7 @@ const Index = () => {
             <div className="grid lg:grid-cols-3 gap-8">
               <Card className="bg-card shadow-xl border-border/50">
                 <CardContent className="p-8">
-                  <div className="text-primary mb-6">
+                  <div className="text-primary mb-6 bg-gradient-to-br from-primary/10 to-secondary/10 p-4 rounded-xl shadow-inner">
                     <MessageSquare className="h-16 w-16 drop-shadow-lg" />
                   </div>
                   <h3 className="font-heading text-2xl font-bold text-hero-bg mb-4">
@@ -144,7 +144,7 @@ const Index = () => {
               
               <Card className="bg-card shadow-xl border-border/50">
                 <CardContent className="p-8">
-                  <div className="text-secondary mb-6">
+                  <div className="text-secondary mb-6 bg-gradient-to-br from-primary/10 to-secondary/10 p-4 rounded-xl shadow-inner">
                     <Phone className="h-16 w-16 drop-shadow-lg" />
                   </div>
                   <h3 className="font-heading text-2xl font-bold text-hero-bg mb-4">
@@ -169,7 +169,7 @@ const Index = () => {
               
               <Card className="bg-gradient-primary text-white shadow-xl">
                 <CardContent className="p-8">
-                  <div className="text-white mb-6">
+                  <div className="text-white mb-6 bg-white/10 p-4 rounded-xl shadow-inner">
                     <Zap className="h-16 w-16 drop-shadow-lg" />
                   </div>
                   <h3 className="font-heading text-2xl font-bold mb-4">
@@ -200,7 +200,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="font-heading text-4xl md:text-5xl font-black text-hero-bg">
-              ¿Por qué un <span className="text-secondary">agente genérico</span> no es suficiente?
+              ¿Por qué un <span className="text-pink-400">agente genérico</span> no es suficiente?
             </h2>
             
             <p className="font-body text-xl text-foreground-muted max-w-3xl mx-auto leading-relaxed">
@@ -211,8 +211,8 @@ const Index = () => {
             <div className="grid md:grid-cols-3 gap-8 pt-12">
               <Card className="border-primary/30 bg-primary/5 shadow-lg">
                 <CardContent className="p-6 text-center">
-                  <div className="text-primary mb-4">
-                    <Shield className="h-12 w-12 mx-auto drop-shadow-md" />
+                  <div className="text-primary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
+                    <Shield className="h-12 w-12 drop-shadow-md" />
                   </div>
                   <h3 className="font-heading text-lg font-bold text-hero-bg mb-2">
                     Entrenado con datos reales del sector
@@ -225,8 +225,8 @@ const Index = () => {
               
               <Card className="border-primary/30 bg-primary/5 shadow-lg">
                 <CardContent className="p-6 text-center">
-                  <div className="text-primary mb-4">
-                    <CheckCircle className="h-12 w-12 mx-auto drop-shadow-md" />
+                  <div className="text-primary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
+                    <CheckCircle className="h-12 w-12 drop-shadow-md" />
                   </div>
                   <h3 className="font-heading text-lg font-bold text-hero-bg mb-2">
                     Validado por marcas líderes del sector
@@ -239,8 +239,8 @@ const Index = () => {
               
               <Card className="border-primary/30 bg-primary/5 shadow-lg">
                 <CardContent className="p-6 text-center">
-                  <div className="text-primary mb-4">
-                    <Users className="h-12 w-12 mx-auto drop-shadow-md" />
+                  <div className="text-primary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
+                    <Users className="h-12 w-12 drop-shadow-md" />
                   </div>
                   <h3 className="font-heading text-lg font-bold text-hero-bg mb-2">
                     Se adapta a tu flujo actual, sin cambios drásticos

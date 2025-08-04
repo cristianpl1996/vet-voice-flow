@@ -10,7 +10,7 @@ All colors MUST be HSL.
   :root {
     /* Better Code Design System */
     --hero-background: 220 64% 8%; /* #0C0F1C */
-    --background: 0 0% 100%; /* white */
+    --background: 0 0% 98%; /* #FAFAFA - para más profundidad */
     --background-alt: 0 0% 98%; /* #FAFAFA */
     --foreground: 0 0% 100%; /* white */
     --foreground-alt: 220 9% 89%; /* #E5E7EB */
