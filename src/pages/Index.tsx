@@ -13,11 +13,21 @@ import {
   Menu,
   X
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "@/components/Logo";
+import DemoModal from "@/components/DemoModal";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Verificar parámetro de URL para abrir modal
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('modal') === 'true') {
+      setIsModalOpen(true);
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -100,14 +110,15 @@ const Index = () => {
               Automatiza llamadas y mensajes con un agente entrenado en el lenguaje real de la industria veterinaria.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 pb-4">
-              <Button size="lg" className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity">
-                Activar mi agente en 24h
-              </Button>
-              <Button variant="outline" size="lg" className="px-8 py-4 text-lg bg-white/10 border-white/20 text-white hover:bg-white/20">
-                Soy una marca <span className="hidden md:inline">, quiero patrocinar clínicas </span>
-              </Button>
-            </div>
+                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 pb-4">
+               <Button 
+                 size="lg" 
+                 className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity"
+                 onClick={() => setIsModalOpen(true)}
+               >
+                 Realiza una demostración en vivo
+               </Button>
+             </div>
 
             <div className="flex justify-center items-center gap-8 pt-0 opacity-80">
               <div className="flex items-center gap-2">
@@ -432,19 +443,17 @@ const Index = () => {
             <h2 className="font-heading text-4xl md:text-5xl font-black text-white">
               Deja que tu equipo se enfoque en los pacientes
             </h2>
-
             <p className="font-body text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               Activa tu agente inteligente y mejora tu atención, tus ventas y la percepción de tu clínica.
               Sin complicaciones técnicas, sin cambios drásticos en tu operación.
             </p>
-
             <div className="pt-8">
-              <Button size="lg" className="px-12 py-4 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity">
-                Agendar activación
+              <Button size="lg" className="px-12 py-4 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity" >
+              <a href="https://forms.gle/JNhDtc1dUsjiKRXw8" target="_blank" className="flex items-center gap-2">
+                  Agendar demostración<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
               </Button>
             </div>
-
-
           </div>
         </div>
       </section>
@@ -609,11 +618,17 @@ const Index = () => {
                 </Button>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-};
+                     </div>
+         </div>
+       </footer>
 
-export default Index;
+       {/* Demo Modal */}
+       <DemoModal 
+         isOpen={isModalOpen} 
+         onClose={() => setIsModalOpen(false)} 
+       />
+     </div>
+   );
+ };
+ 
+ export default Index;
