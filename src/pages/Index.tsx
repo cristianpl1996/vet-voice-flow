@@ -37,7 +37,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             {/* Logo y Navegación */}
             <div className="flex items-center space-x-8">
-              <Logo />
+              <Logo className="float-left" />
 
               {/* Desktop Navigation */}
               <nav className="hidden md:flex items-center space-x-8" style={{ fontSize: "1.1rem" }}>
@@ -57,7 +57,7 @@ const Index = () => {
             <div className="hidden md:block">
               <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity" style={{ backgroundColor: "#19191E", color: "#fff" }}>
                 <a href="https://forms.gle/JNhDtc1dUsjiKRXw8" target="_blank" className="flex items-center gap-2">
-                  Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </a>
               </Button>
             </div>
@@ -86,7 +86,7 @@ const Index = () => {
                 </a>
                 <Button size="lg" className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity" style={{ backgroundColor: "#19191E", color: "#fff" }}>
                   <a href="https://forms.gle/JNhDtc1dUsjiKRXw8" target="_blank" className="flex items-center gap-2">
-                    Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                   </a>
                 </Button>
               </nav>
@@ -97,9 +97,9 @@ const Index = () => {
 
       {/* Hero Section - Fondo oscuro */}
       <section className="bg-background pt-20 pb-0 px-4">
-        <div className="container mx-auto px-4 py-20 text-center">
+        <div className="container mx-auto px-4 py-10 md:py-20 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
-            <h1 className="font-heading text-5xl md:text-6xl font-black text-white leading-tight">
+            <h1 className="font-heading text-4xl md:text-6xl font-black text-white leading-tight">
               Atiende cada tutor sin perder una sola{" "}
               <span className="gradient-text">
                 oportunidad
@@ -450,7 +450,7 @@ const Index = () => {
             <div className="pt-8">
               <Button size="lg" className="px-12 py-4 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity" >
               <a href="https://forms.gle/JNhDtc1dUsjiKRXw8" target="_blank" className="flex items-center gap-2">
-                  Agendar demostración<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  Agendar demostración<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </a>
               </Button>
             </div>
