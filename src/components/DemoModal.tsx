@@ -182,7 +182,12 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                   <Phone className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-sm md:text-lg font-bold text-white mb-2">
-                  Agente de voz
+                  <span className="hidden md:inline">
+                    Agente de Voz
+                  </span>
+                  <span className="md:hidden">
+                    Agente Voz
+                  </span>
                 </h3>
                 <p className="text-white/60 text-sm hidden md:block">
                   Prueba nuestro agente de voz inteligente
