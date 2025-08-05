@@ -75,7 +75,6 @@ const Index = () => {
           {isMenuOpen && (
             <div className="md:hidden mt-4 pb-4 border-t border-white/10">
               <nav className="flex flex-col space-y-4 pt-4">
-                <Logo className="float-left" />
                 <a href="#servicios" className="text-white/80 hover:text-white transition-colors">
                   Servicios
                 </a>
