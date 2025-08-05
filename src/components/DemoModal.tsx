@@ -165,26 +165,26 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
           </p>
 
           {/* Options */}
-          <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <div className="grid grid-cols-2 gap-4 mb-6">
             {/* Voice Option */}
             <Card
               className={`cursor-pointer transition-all duration-200 hover:scale-105 ${selectedOption === 'voice'
-                ? 'border-primary bg-primary/10'
+                ? 'border-primary'
                 : 'border-white/10 hover:border-primary/50'
                 }`}
               onClick={() => setSelectedOption('voice')}
             >
               <CardContent className="p-6 text-center">
                 <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${selectedOption === 'voice'
-                  ? 'bg-gradient-to-br from-primary to-secondary'
+                  ? 'bg-gradient-to-br from-primary to-integration'
                   : 'bg-white/10'
                   }`}>
                   <Phone className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">
-                  Agente de Voz
+                <h3 className="text-sm md:text-lg font-bold text-white mb-2">
+                  Agente de voz
                 </h3>
-                <p className="text-white/60 text-sm">
+                <p className="text-white/60 text-sm hidden md:block">
                   Prueba nuestro agente de voz inteligente
                 </p>
               </CardContent>
@@ -193,7 +193,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
             {/* WhatsApp Option */}
             <Card
               className={`cursor-pointer transition-all duration-200 hover:scale-105 ${selectedOption === 'whatsapp'
-                ? 'border-secondary bg-secondary/10'
+                ? 'border-secondary'
                 : 'border-white/10 hover:border-secondary/50'
                 }`}
               onClick={() => setSelectedOption('whatsapp')}
@@ -205,10 +205,10 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                   }`}>
                   <MessageSquare className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">
+                <h3 className="text-sm md:text-lg font-bold text-white mb-2">
                   WhatsApp
                 </h3>
-                <p className="text-white/60 text-sm">
+                <p className="text-white/60 text-sm hidden md:block">
                   Chatea directamente con nuestro agente
                 </p>
               </CardContent>
