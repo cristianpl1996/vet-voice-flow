@@ -20,7 +20,7 @@ const Logo = ({ className = "", showText = true }: LogoProps) => {
             target.style.display = 'none';
             const parent = target.parentElement;
             if (parent) {
-              parent.innerHTML = '<div class="w-full h-full bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center"><Code class="w-5 h-5 text-white" /></div>';
+              parent.innerHTML = '<div class="w-full h-full bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-start"><Code class="w-5 h-5 text-white" /></div>';
             }
           }}
         />
