@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageSquare, X, CheckCircle, User, Briefcase } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 interface DemoModalProps {
   isOpen: boolean;
@@ -18,20 +20,53 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  // Profesiones de la industria veterinaria
+  // Profesiones expandidas de la industria veterinaria
   const veterinaryProfessions = [
     'Veterinario',
+    'Veterinario especialista',
+    'Veterinario cirujano',
+    'Veterinario dermatólogo',
+    'Veterinario cardiólogo',
+    'Veterinario oncólogo',
+    'Veterinario oftalmólogo',
+    'Veterinario ortopedista',
+    'Veterinario internista',
+    'Veterinario anestesiólogo',
+    'Veterinario radiólogo',
+    'Veterinario patólogo',
+    'Veterinario nutricionista',
+    'Veterinario comportamiento',
     'Auxiliar veterinario',
     'Técnico veterinario',
+    'Técnico de laboratorio',
+    'Técnico de imagenología',
+    'Técnico de anestesia',
     'Recepcionista de clínica',
     'Administrador de clínica',
+    'Gerente de clínica',
     'Dueño de clínica',
+    'Director médico',
+    'Coordinador de servicios',
+    'Supervisor de personal',
     'Estudiante de veterinaria',
+    'Estudiante de técnico veterinario',
+    'Profesor de veterinaria',
+    'Investigador veterinario',
+    'Consultor veterinario',
+    'Veterinario de campo',
+    'Veterinario de emergencias',
+    'Veterinario de zoológico',
+    'Veterinario de fauna silvestre',
+    'Veterinario equino',
+    'Veterinario de animales exóticos',
+    'Veterinario de animales de granja',
+    'Veterinario de animales de compañía',
     'Otro'
   ];
 
   // Validar número de teléfono
   const validatePhone = (phone: string) => {
+    if (!phone) return false;
     // Validación básica para números con código de país
     const phoneRegex = /^\+[1-9]\d{1,14}$/;
     return phoneRegex.test(phone);
@@ -275,20 +310,20 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                 </select>
               </div>
 
-              {/* Número de teléfono */}
+              {/* Número de teléfono con selector de país */}
               <div>
                 <label className="block text-white/80 text-sm font-medium mb-2">
                   <Phone className="w-4 h-4 inline mr-2" />
                   Número de teléfono
                 </label>
                 <div className="relative">
-                  <input
-                    type="tel"
+                  <PhoneInput
+                    international
+                    defaultCountry="CO"
                     value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    onChange={(value) => setPhoneNumber(value || '')}
                     placeholder="+57 310 2523739"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-primary transition-colors"
-                    required
+                    
                   />
                   {phoneNumber && (
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
@@ -301,7 +336,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                   )}
                 </div>
                 <p className="text-xs text-white/60 mt-1">
-                  Incluye el código de país (ej: +57)
+                  Selecciona tu país y ingresa tu número de teléfono
                 </p>
               </div>
 

@@ -195,3 +195,75 @@ All colors MUST be HSL.
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(320 85% 60%);
 }
+
+/* Estilos personalizados para PhoneInput */
+.PhoneInput {
+  @apply relative;
+}
+
+.PhoneInputInput {
+  @apply w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-primary transition-colors;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+.PhoneInputInput::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.PhoneInputInput:focus {
+  outline: none !important;
+  border-color: hsl(var(--primary)) !important;
+}
+
+.PhoneInputCountry {
+  @apply mr-2;
+}
+
+.PhoneInputCountryFlag {
+  @apply border-0 bg-transparent;
+  border: none !important;
+  background: transparent !important;
+}
+
+.PhoneInputCountrySelectArrow {
+  @apply text-white/50;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.PhoneInputCountrySelect {
+  @apply bg-background text-white;
+  background: hsl(var(--background)) !important;
+  color: white !important;
+}
+
+.PhoneInputCountrySelect option {
+  @apply bg-background text-white;
+  background: hsl(var(--background)) !important;
+  color: white !important;
+}
+
+/* Estilos para el dropdown de países */
+.PhoneInputCountrySelect {
+  @apply border border-white/20 rounded;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 0.5rem !important;
+}
+
+/* Ajustes para el tema oscuro */
+.dark .PhoneInputInput {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+.dark .PhoneInputCountrySelect {
+  background: hsl(var(--background)) !important;
+  color: white !important;
+}
+
+.dark .PhoneInputCountrySelect option {
+  background: hsl(var(--background)) !important;
+  color: white !important;
+}
