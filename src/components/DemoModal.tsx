@@ -56,7 +56,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
 
     setIsLoading(true);
     try {
-      const response = await fetch('https://n8n.bettercode.com.co/webhook/2ccffb8e-551a-45f1-ae4d-34f79fe3032a', {
+      const response = await fetch('https://n8n.bettercode.com.co/webhook/26cd3c1d-5171-48ca-9f1f-ccb4b7991dae', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -76,23 +76,26 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
 
         // Mostrar toast de confirmación
         toast({
-          title: "¡Formulario enviado exitosamente!",
+          title: "¡Formulario enviado exitosamente! ✅",
           description: "Nuestro agente te contactará pronto para realizar la demostración personalizada.",
           variant: "default",
+          duration: 5000,
         });
       } else {
         toast({
-          title: "Error al enviar el formulario",
+          title: "Error al enviar el formulario ❌",
           description: "Por favor, intenta nuevamente. Si el problema persiste, contacta soporte.",
           variant: "destructive",
+          duration: 5000,
         });
       }
     } catch (error) {
       console.error('Error:', error);
       toast({
-        title: "Error de conexión",
+        title: "Error de conexión ❌",
         description: "No se pudo enviar el formulario. Verifica tu conexión e intenta nuevamente.",
         variant: "destructive",
+        duration: 5000,
       });
     } finally {
       setIsLoading(false);
@@ -145,7 +148,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-white/10 flex-shrink-0">
           <h2 className="text-2xl font-bold text-white">
-            Demostración en Vivo
+            Demostración en vivo
           </h2>
           <button
             onClick={onClose}
@@ -166,15 +169,15 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
             {/* Voice Option */}
             <Card
               className={`cursor-pointer transition-all duration-200 hover:scale-105 ${selectedOption === 'voice'
-                  ? 'border-primary bg-primary/10'
-                  : 'border-white/10 hover:border-primary/50'
+                ? 'border-primary bg-primary/10'
+                : 'border-white/10 hover:border-primary/50'
                 }`}
               onClick={() => setSelectedOption('voice')}
             >
               <CardContent className="p-6 text-center">
                 <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${selectedOption === 'voice'
-                    ? 'bg-gradient-to-br from-primary to-secondary'
-                    : 'bg-white/10'
+                  ? 'bg-gradient-to-br from-primary to-secondary'
+                  : 'bg-white/10'
                   }`}>
                   <Phone className="w-8 h-8 text-white" />
                 </div>
@@ -190,15 +193,15 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
             {/* WhatsApp Option */}
             <Card
               className={`cursor-pointer transition-all duration-200 hover:scale-105 ${selectedOption === 'whatsapp'
-                  ? 'border-secondary bg-secondary/10'
-                  : 'border-white/10 hover:border-secondary/50'
+                ? 'border-secondary bg-secondary/10'
+                : 'border-white/10 hover:border-secondary/50'
                 }`}
               onClick={() => setSelectedOption('whatsapp')}
             >
               <CardContent className="p-6 text-center">
                 <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${selectedOption === 'whatsapp'
-                    ? 'bg-gradient-to-br from-secondary to-integration'
-                    : 'bg-white/10'
+                  ? 'bg-gradient-to-br from-secondary to-integration'
+                  : 'bg-white/10'
                   }`}>
                   <MessageSquare className="w-8 h-8 text-white" />
                 </div>
@@ -327,7 +330,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                       Redirigir a WhatsApp
                     </p>
                     <p className="text-white/70 text-xs">
-                    Serás redirigido a WhatsApp para comenzar la conversación con nuestro agente inteligente.
+                      Serás redirigido a WhatsApp para comenzar la conversación con nuestro agente inteligente.
                     </p>
                   </div>
                 </div>

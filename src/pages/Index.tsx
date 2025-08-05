@@ -116,7 +116,7 @@ const Index = () => {
                  className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity"
                  onClick={() => setIsModalOpen(true)}
                >
-                 Realiza una demostración en vivo
+                 REALIZA UNA DEMOSTRACIÓN <span className="hidden md:inline">EN VIVO</span>
                </Button>
              </div>
 
