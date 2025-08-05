@@ -8,36 +8,36 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Hubu Design System - Dark Version (Based on Image) */
-    --hero-background: 0 0% 4%; /* Negro muy oscuro #0A0A0A */
-    --background: 0 0% 4%; /* Negro muy oscuro #0A0A0A */
-    --background-alt: 0 0% 8%; /* Negro oscuro #141414 */
+    /* Bettercode Design System - Dark Version (Based on Image) */
+    --hero-background: 240 15% 6%; /* #100E1F - Fondo muy oscuro */
+    --background: 240 15% 6%; /* #100E1F - Fondo muy oscuro */
+    --background-alt: 240 15% 8%; /* #1A1A2E - Fondo alternativo ligeramente más claro */
     --foreground: 0 0% 100%; /* white */
     --foreground-alt: 220 9% 89%; /* #E5E7EB */
     --foreground-muted: 220 14% 64%; /* #9CA3AF */
     --text-dark: 0 0% 100%; /* white para fondos oscuros */
 
-    --card: 0 0% 8%; /* Negro oscuro para tarjetas */
+    --card: 240 15% 8%; /* Fondo oscuro para tarjetas */
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 8%;
+    --popover: 240 15% 8%;
     --popover-foreground: 0 0% 100%;
 
-    /* Hubu Dark Brand Colors (Based on Image) */
-    --primary: 120 85% 50%; /* Verde vibrante #10B981 */
+    /* Bettercode Brand Colors (Based on Image) */
+    --primary: 245, 79%, 66%; /* Azul vibrante #4A69F5 */
     --primary-foreground: 0 0% 100%;
-    --secondary: 270 75% 60%; /* Morado vibrante #A855F7 */
+    --secondary: 320 85% 60%; /* Rosa/Magenta vibrante #E949B9 */
     --secondary-foreground: 0 0% 100%;
-    --integration-color: 270 75% 60%; /* Morado vibrante */
+    --integration-color: 270 75% 60%; /* Morado vibrante #A855F7 */
     
-    /* Button Gradients */
-    --gradient-primary: linear-gradient(90deg, hsl(120 85% 50%), hsl(270 75% 60%));
-    --gradient-secondary-bg: 222 47% 11%; /* #111827 para botón secundario */
+    /* Button Gradients - Azul a Rosa/Magenta */
+    --gradient-primary: linear-gradient(90deg, hsl(245, 79%, 66%), hsl(320 85% 60%));
+    --gradient-secondary-bg: 240 15% 8%; /* Fondo oscuro para botón secundario */
     
-    --muted: 0 0% 8%;
+    --muted: 240 15% 8%;
     --muted-foreground: 220 14% 64%;
 
-    --accent: 120 85% 50%;
+    --accent: 245, 79%, 66%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -45,56 +45,56 @@ All colors MUST be HSL.
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 120 85% 50%;
+    --ring: 245, 79%, 66%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 8%;
+    --sidebar-background: 240 15% 8%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 120 85% 50%;
+    --sidebar-ring: 245, 79%, 66%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 240 15% 6%;
+    --foreground: 0 0% 100%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 240 15% 8%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 240 15% 8%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 245, 79%, 66%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 320 85% 60%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 240 15% 8%;
+    --muted-foreground: 220 14% 64%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 245, 79%, 66%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
+    --border: 240 15% 8%;
+    --input: 240 15% 8%;
+    --ring: 245, 79%, 66%;
+    --sidebar-background: 240 15% 8%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 245, 79%, 66%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent: 240 15% 8%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-border: 240 15% 8%;
+    --sidebar-ring: 245, 79%, 66%;
   }
 }
 
@@ -154,9 +154,9 @@ All colors MUST be HSL.
   animation: fadeInRight 0.6s ease-out;
 }
 
-/* Gradient text */
+/* Gradient text - Azul a Rosa/Magenta */
 .gradient-text {
-  background: linear-gradient(90deg, hsl(120 85% 50%), hsl(270 75% 60%));
+  background: linear-gradient(90deg, hsl(245, 79%, 66%), hsl(320 85% 60%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -184,14 +184,14 @@ All colors MUST be HSL.
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(0 0% 4%);
+  background: hsl(240 15% 6%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(120 85% 50%);
+  background: hsl(245, 79%, 66%);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(270 75% 60%);
+  background: hsl(320 85% 60%);
 }

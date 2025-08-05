@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  CheckCircle, 
-  MessageSquare, 
-  Phone, 
-  Users, 
-  Zap, 
-  Shield, 
-  Building2, 
-  TrendingUp, 
+import {
+  CheckCircle,
+  MessageSquare,
+  Phone,
+  Users,
+  Zap,
+  Shield,
+  Building2,
+  TrendingUp,
   Clock,
   Menu,
   X
@@ -22,29 +22,31 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header/Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 glass">
-        <div className="container mx-auto px-4 py-4">
+      <header className="fixed top-0 left-0 right-0 z-50 glass" style={{ border: "none" }}>
+        <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Logo />
+            {/* Logo y Navegación */}
+            <div className="flex items-center space-x-8">
+              <Logo />
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              <a href="#servicios" className="text-white/80 hover:text-white transition-colors">
-                Servicios
-              </a>
-              <a href="#enfoque" className="text-white/80 hover:text-white transition-colors">
-                Enfoque
-              </a>
-              <a href="#sectores" className="text-white/80 hover:text-white transition-colors">
-                Sectores
-              </a>
-            </nav>
+              {/* Desktop Navigation */}
+              <nav className="hidden md:flex items-center space-x-8" style={{ fontSize: "1.1rem" }}>
+                <a href="#servicios" className="text-white/80 hover:text-white transition-colors">
+                  Servicios
+                </a>
+                <a href="#enfoque" className="text-white/80 hover:text-white transition-colors">
+                  Enfoque
+                </a>
+                <a href="#sectores" className="text-white/80 hover:text-white transition-colors">
+                  Sectores
+                </a>
+              </nav>
+            </div>
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <Button className="bg-gradient-primary hover:opacity-90 transition-opacity">
-                Agendar →
+              <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity" style={{ backgroundColor: "#19191E", color: "#fff" }}>
+                Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
               </Button>
             </div>
 
@@ -70,8 +72,8 @@ const Index = () => {
                 <a href="#sectores" className="text-white/80 hover:text-white transition-colors">
                   Sectores
                 </a>
-                <Button className="bg-gradient-primary hover:opacity-90 transition-opacity w-full">
-                  Agendar →
+                <Button size="lg" className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity" style={{ backgroundColor: "#19191E", color: "#fff" }}>
+                  Agendar <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </Button>
               </nav>
             </div>
@@ -89,20 +91,20 @@ const Index = () => {
                 oportunidad
               </span>
             </h1>
-            
+
             <p className="font-body text-xl md:text-2xl text-foreground-alt max-w-3xl mx-auto leading-relaxed">
               Automatiza llamadas y mensajes con un agente entrenado en el lenguaje real de la industria veterinaria.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
               <Button size="lg" className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity">
                 Activar mi agente en 24h
               </Button>
-              <Button variant="secondary" size="lg" className="px-8 py-4 text-lg">
+              <Button variant="outline" size="lg" className="px-8 py-4 text-lg bg-white/10 border-white/20 text-white hover:bg-white/20">
                 Soy una marca, quiero patrocinar clínicas
               </Button>
             </div>
-            
+
             <div className="flex justify-center items-center gap-8 pt-12 opacity-80">
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-primary" />
@@ -128,13 +130,13 @@ const Index = () => {
             <h2 className="font-heading text-4xl md:text-5xl font-black text-white">
               ¿Tu recepción está <span className="text-secondary">colapsada</span>?
             </h2>
-            
+
             <p className="font-body text-xl text-foreground-muted max-w-3xl mx-auto leading-relaxed">
-              Llamadas sin responder, mensajes acumulándose, tiempos de espera eternos, clientes impacientes... 
-              y cuando logras atender, tienes que escalar información a médicos, farmacia, caja. El caos diario 
+              Llamadas sin responder, mensajes acumulándose, tiempos de espera eternos, clientes impacientes...
+              y cuando logras atender, tienes que escalar información a médicos, farmacia, caja. El caos diario
               que conoces muy bien.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-8 pt-12">
               <Card className="glass border-white/10 shadow-lg hover-lift">
                 <CardContent className="p-6 text-center">
@@ -146,7 +148,7 @@ const Index = () => {
                   </h3>
                 </CardContent>
               </Card>
-              
+
               <Card className="glass border-white/10 shadow-lg hover-lift">
                 <CardContent className="p-6 text-center">
                   <div className="text-secondary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
@@ -157,7 +159,7 @@ const Index = () => {
                   </h3>
                 </CardContent>
               </Card>
-              
+
               <Card className="glass border-white/10 shadow-lg hover-lift">
                 <CardContent className="p-6 text-center">
                   <div className="text-integration mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
@@ -184,25 +186,25 @@ const Index = () => {
                   lenguaje de la industria
                 </span>
               </h2>
-              
+
               <p className="font-body text-xl text-foreground-muted max-w-3xl mx-auto leading-relaxed">
-                Nuestra solución gestiona automáticamente mensajes y llamadas, resuelve dudas, 
-                escala internamente cuando es necesario, y responde 24/7 con el conocimiento 
+                Nuestra solución gestiona automáticamente mensajes y llamadas, resuelve dudas,
+                escala internamente cuando es necesario, y responde 24/7 con el conocimiento
                 específico del sector veterinario.
               </p>
             </div>
-            
+
             <div className="grid lg:grid-cols-3 gap-8">
               <Card className="glass text-white shadow-xl hover-lift border-white/10">
                 <CardContent className="p-8">
-                  <div className="text-white mb-6 bg-white/10 p-4 rounded-xl shadow-inner">
+                  <div className="text-white mb-6 p-4 rounded-xl shadow-inner">
                     <MessageSquare className="h-16 w-16 drop-shadow-lg text-primary" />
                   </div>
                   <h3 className="font-heading text-2xl font-bold mb-4">
                     Agente de WhatsApp
                   </h3>
                   <p className="text-white/90 mb-6">
-                    Conversación fluida, personalizada y rápida. Resuelve consultas sobre servicios, 
+                    Conversación fluida, personalizada y rápida. Resuelve consultas sobre servicios,
                     precios, disponibilidad y agenda citas de forma natural.
                   </p>
                   <ul className="space-y-2">
@@ -217,17 +219,17 @@ const Index = () => {
                   </ul>
                 </CardContent>
               </Card>
-              
+
               <Card className="glass text-white shadow-xl hover-lift border-white/10">
                 <CardContent className="p-8">
-                  <div className="text-white mb-6 bg-white/10 p-4 rounded-xl shadow-inner">
+                  <div className="text-white mb-6 p-4 rounded-xl shadow-inner">
                     <Phone className="h-16 w-16 drop-shadow-lg text-secondary" />
                   </div>
                   <h3 className="font-heading text-2xl font-bold mb-4">
                     Agente de Voz
                   </h3>
                   <p className="text-white/90 mb-6">
-                    Atiende llamadas como un asistente real y dispara flujos posteriores 
+                    Atiende llamadas como un asistente real y dispara flujos posteriores
                     por WhatsApp para dar seguimiento personalizado.
                   </p>
                   <ul className="space-y-2">
@@ -242,10 +244,10 @@ const Index = () => {
                   </ul>
                 </CardContent>
               </Card>
-              
+
               <Card className="glass text-white shadow-xl hover-lift border-white/10">
                 <CardContent className="p-8">
-                  <div className="text-white mb-6 bg-white/10 p-4 rounded-xl shadow-inner">
+                  <div className="text-white mb-6 p-4 rounded-xl shadow-inner">
                     <Zap className="h-16 w-16 drop-shadow-lg text-integration" />
                   </div>
                   <h3 className="font-heading text-2xl font-bold mb-4">
@@ -278,12 +280,12 @@ const Index = () => {
             <h2 className="font-heading text-4xl md:text-5xl font-black text-white">
               ¿Por qué un <span className="text-secondary">agente genérico</span> no es suficiente?
             </h2>
-            
+
             <p className="font-body text-xl text-foreground-muted max-w-3xl mx-auto leading-relaxed">
-              Los bots genéricos no entienden la terminología veterinaria, alucinan respuestas 
+              Los bots genéricos no entienden la terminología veterinaria, alucinan respuestas
               y no escalan internamente. Nosotros entrenamos con la data real de las marcas del sector.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-8 pt-12">
               <Card className="glass border-white/10 shadow-lg hover-lift">
                 <CardContent className="p-6 text-center">
@@ -298,7 +300,7 @@ const Index = () => {
                   </p>
                 </CardContent>
               </Card>
-              
+
               <Card className="glass border-white/10 shadow-lg hover-lift">
                 <CardContent className="p-6 text-center">
                   <div className="text-secondary mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
@@ -312,7 +314,7 @@ const Index = () => {
                   </p>
                 </CardContent>
               </Card>
-              
+
               <Card className="glass border-white/10 shadow-lg hover-lift">
                 <CardContent className="p-6 text-center">
                   <div className="text-integration mb-4 bg-gradient-to-br from-primary/10 to-secondary/10 p-3 rounded-lg shadow-inner mx-auto w-fit">
@@ -338,7 +340,7 @@ const Index = () => {
             <h2 className="font-heading text-3xl font-black text-white mb-12">
               Clínicas que ya confían en nosotros
             </h2>
-            
+
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="glass border-white/10 shadow-lg hover-lift">
                 <CardContent className="p-6 rounded-xl">
@@ -354,7 +356,7 @@ const Index = () => {
                   </div>
                 </CardContent>
               </Card>
-              
+
               <Card className="glass border-white/10 shadow-lg hover-lift">
                 <CardContent className="p-6 rounded-xl">
                   <div className="text-secondary text-4xl mb-4 font-bold">"</div>
@@ -369,7 +371,7 @@ const Index = () => {
                   </div>
                 </CardContent>
               </Card>
-              
+
               <Card className="glass border-white/10 shadow-lg hover-lift">
                 <CardContent className="p-6 rounded-xl">
                   <div className="text-primary text-4xl mb-4 font-bold">"</div>
@@ -426,34 +428,183 @@ const Index = () => {
             <h2 className="font-heading text-4xl md:text-5xl font-black text-white">
               Deja que tu equipo se enfoque en los pacientes
             </h2>
-            
+
             <p className="font-body text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Activa tu agente inteligente y mejora tu atención, tus ventas y la percepción de tu clínica. 
+              Activa tu agente inteligente y mejora tu atención, tus ventas y la percepción de tu clínica.
               Sin complicaciones técnicas, sin cambios drásticos en tu operación.
             </p>
-            
+
             <div className="pt-8">
               <Button size="lg" className="px-12 py-4 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity">
                 Agendar activación
               </Button>
             </div>
-            
-            <p className="text-white/80 text-sm">
-              ✓ Configuración en 24 horas ✓ Soporte incluido ✓ Sin permanencia
-            </p>
+
+
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 border-t border-white/10 bg-background-alt">
+      <footer className="py-16 px-4 bg-background-alt">
         <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <Logo />
-            
-            <div className="text-white/60 text-sm">
-              © 2024 Hubu. Todos los derechos reservados.
+          {/* Top Footer Section */}
+          <div className="grid md:grid-cols-3 gap-12 mb-16">
+            {/* Left Column - Company Info & Socials */}
+            <div className="space-y-6" style={{ marginTop: "-10px" }}>
+              <div>
+               <Logo />
+                <p className="text-white/80 text-sm leading-relaxed">
+                  Construimos ecosistemas inteligentes que combinan IA especializada, software a medida e infraestructura interoperable para resolver problemas reales de negocio.
+                </p>
+              </div>
+
+              {/* Social Media Icons */}
+              <div className="flex space-x-4">
+                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </div>
+                <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                  </svg>
+                </div>
+                <div className="w-10 h-10 bg-integration rounded-full flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
+                </div>
+              </div>
             </div>
+
+            {/* Middle Column - Servicios */}
+            <div className="space-y-6">
+              <h4 className="font-bold text-white text-lg">Servicios</h4>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-secondary/20 rounded flex items-center justify-center">
+                    <Zap className="w-4 h-4 text-secondary" />
+                  </div>
+                  <span className="text-white/80 text-sm">Modelos de IA</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-integration/20 rounded flex items-center justify-center">
+                    <Building2 className="w-4 h-4 text-integration" />
+                  </div>
+                  <span className="text-white/80 text-sm">Infrastructure</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary/20 rounded flex items-center justify-center">
+                    <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <span className="text-white/80 text-sm">Ecosistemas</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Contacto */}
+            <div className="space-y-6">
+              <h4 className="font-bold text-white text-lg">Contacto</h4>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-primary/20 rounded flex items-center justify-center">
+                    <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <span className="text-white/80 text-sm">cesar@hubu.com.co</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-secondary/20 rounded flex items-center justify-center">
+                    <Phone className="w-4 h-4 text-secondary" />
+                  </div>
+                  <span className="text-white/80 text-sm">+57 310 2523739</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-integration/20 rounded flex items-center justify-center">
+                    <svg className="w-4 h-4 text-integration" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <span className="text-white/80 text-sm">Pereira, Colombia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Footer Section - Cards */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Documentación Card */}
+            <Card className="bg-card/50 border-white/10 hover-lift">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-white text-lg">Documentación</h5>
+                    <p className="text-white/60 text-sm">Guías técnicas y casos de uso</p>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="w-full bg-white/10 border-white/20 text-white hover:bg-white/20">
+                  Ver recursos
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Comunidad Card */}
+            <Card className="bg-card/50 border-white/10 hover-lift">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-secondary to-integration rounded-full flex items-center justify-center">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-white text-lg">Comunidad</h5>
+                    <p className="text-white/60 text-sm">Únete a nuestra comunidad técnica</p>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="w-full bg-white/10 border-white/20 text-white hover:bg-white/20">
+                  Unirse
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Blog Card */}
+            <Card className="bg-card/50 border-white/10 hover-lift">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-integration to-primary rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-white text-lg">Blog</h5>
+                    <p className="text-white/60 text-sm">Insights sobre IA y desarrollo</p>
+                  </div>
+                </div>
+                <Button variant="outline" size="sm" className="w-full bg-white/10 border-white/20 text-white hover:bg-white/20">
+                  Leer blog
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </footer>
