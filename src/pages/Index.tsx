@@ -37,7 +37,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             {/* Logo y Navegación */}
             <div className="flex items-center justify-start space-x-8">
-              <Logo className="float-left" />
+              <Logo className="hidden md:block"/>
 
               {/* Desktop Navigation */}
               <nav className="hidden md:flex items-center space-x-8" style={{ fontSize: "1.1rem" }}>
