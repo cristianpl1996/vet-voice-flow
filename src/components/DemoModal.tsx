@@ -20,9 +20,10 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  // Profesiones expandidas de la industria veterinaria
+  // Profesiones completas de la industria veterinaria
   const veterinaryProfessions = [
-    'Veterinario',
+    // Veterinarios generales y especialistas
+    'Veterinario general',
     'Veterinario especialista',
     'Veterinario cirujano',
     'Veterinario dermatólogo',
@@ -35,12 +36,46 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
     'Veterinario radiólogo',
     'Veterinario patólogo',
     'Veterinario nutricionista',
-    'Veterinario comportamiento',
+    'Veterinario de comportamiento',
+    'Veterinario fisioterapeuta',
+    'Veterinario rehabilitador',
+    'Veterinario homeópata',
+    'Veterinario acupunturista',
+    
+    // Veterinarios por tipo de animal
+    'Veterinario de perros y gatos',
+    'Veterinario equino',
+    'Veterinario de bovinos',
+    'Veterinario de porcinos',
+    'Veterinario de aves',
+    'Veterinario de animales exóticos',
+    'Veterinario de reptiles',
+    'Veterinario de peces',
+    'Veterinario de fauna silvestre',
+    'Veterinario de zoológico',
+    'Veterinario de animales de granja',
+    'Veterinario de animales de compañía',
+    'Veterinario de emergencias',
+    'Veterinario de campo',
+    'Veterinario de producción animal',
+    
+    // Personal técnico y auxiliar
     'Auxiliar veterinario',
     'Técnico veterinario',
     'Técnico de laboratorio',
     'Técnico de imagenología',
     'Técnico de anestesia',
+    'Técnico de radiología',
+    'Técnico de ecografía',
+    'Técnico de endoscopia',
+    'Técnico de fisioterapia',
+    'Técnico de rehabilitación',
+    'Técnico de emergencias',
+    'Técnico de quirófano',
+    'Técnico de farmacia veterinaria',
+    'Técnico de control de calidad',
+    
+    // Personal administrativo y gerencial
     'Recepcionista de clínica',
     'Administrador de clínica',
     'Gerente de clínica',
@@ -48,19 +83,64 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
     'Director médico',
     'Coordinador de servicios',
     'Supervisor de personal',
-    'Estudiante de veterinaria',
-    'Estudiante de técnico veterinario',
+    'Contador de clínica',
+    'Recursos humanos',
+    'Marketing veterinario',
+    'Ventas veterinarias',
+    'Atención al cliente',
+    
+    // Personal de soporte
+    'Aseador/a de clínica',
+    'Mantenimiento de equipos',
+    'Conductor de ambulancia',
+    'Personal de seguridad',
+    'Personal de limpieza',
+    'Personal de cocina (para mascotas)',
+    'Personal de grooming',
+    'Entrenador de mascotas',
+    
+    // Personal de laboratorio y farmacia
+    'Farmacéutico veterinario',
+    'Químico de laboratorio',
+    'Microbiólogo veterinario',
+    'Parasitólogo',
+    'Toxicólogo veterinario',
+    'Analista de calidad',
+    'Investigador de laboratorio',
+    
+    // Personal de educación e investigación
     'Profesor de veterinaria',
     'Investigador veterinario',
     'Consultor veterinario',
-    'Veterinario de campo',
-    'Veterinario de emergencias',
-    'Veterinario de zoológico',
-    'Veterinario de fauna silvestre',
-    'Veterinario equino',
-    'Veterinario de animales exóticos',
-    'Veterinario de animales de granja',
-    'Veterinario de animales de compañía',
+    'Asesor técnico',
+    'Capacitador veterinario',
+    'Escritor técnico veterinario',
+    'Editor de revistas veterinarias',
+    
+    // Personal de ventas y distribución
+    'Representante de ventas veterinarias',
+    'Distribuidor de productos veterinarios',
+    'Vendedor de alimentos para mascotas',
+    'Vendedor de equipos veterinarios',
+    'Vendedor de medicamentos',
+    'Vendedor de suplementos',
+    
+    // Personal de servicios especializados
+    'Fotógrafo veterinario',
+    'Videógrafo veterinario',
+    'Diseñador de productos veterinarios',
+    'Desarrollador de software veterinario',
+    'Consultor de sistemas veterinarios',
+    'Especialista en telemedicina',
+    
+    // Estudiantes y pasantes
+    'Estudiante de veterinaria',
+    'Estudiante de técnico veterinario',
+    'Pasante de veterinaria',
+    'Residente veterinario',
+    'Estudiante de auxiliar veterinario',
+    
+    // Otros roles
     'Otro'
   ];
 
@@ -299,6 +379,9 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                   value={profession}
                   onChange={(e) => setProfession(e.target.value)}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-primary transition-colors"
+                  style={{
+                    appearance: 'none',
+                  }}
                   required
                 >
                   <option value="" className="bg-background text-white">Selecciona tu profesión</option>
@@ -364,7 +447,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
               {/* Mensaje informativo */}
               <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                   <div>
                     <p className="text-white/90 text-sm font-medium mb-1">
                       Redirigir a WhatsApp
