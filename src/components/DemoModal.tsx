@@ -220,7 +220,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                   WhatsApp
                 </h3>
                 <p className="text-white/60 text-sm hidden md:block">
-                  Chatea directamente con nuestro agente
+                  Chatea directamente con nuestro agente inteligente
                 </p>
               </CardContent>
             </Card>
@@ -297,7 +297,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                     value={phoneNumber}
                     onChange={(value) => setPhoneNumber(value || '')}
                     placeholder="+57 310 2523739"
-                    
+
                   />
                   {phoneNumber && (
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
@@ -319,6 +319,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                 disabled={!isValidPhone || !fullName || !profession || isLoading}
                 className="w-full bg-gradient-primary hover:opacity-90 transition-opacity disabled:opacity-50"
               >
+                <Phone className="w-5 h-5 mr-2" />
                 {isLoading ? (
                   <div className="flex items-center gap-2">
                     <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -355,7 +356,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
                 className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:opacity-90 transition-opacity"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
-                Abrir WhatsApp
+                Iniciar demostración en WhatsApp
               </Button>
             </div>
           )}
