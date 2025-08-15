@@ -28,7 +28,7 @@ const Index = () => {
     if (element) {
       const headerHeight = 80; // Altura aproximada del header
       const elementPosition = element.offsetTop - headerHeight;
-      
+
       window.scrollTo({
         top: elementPosition,
         behavior: 'smooth'
@@ -40,9 +40,9 @@ const Index = () => {
 
   // Función para scroll al inicio
   const scrollToTop = () => {
-    window.scrollTo({ 
-      top: 0, 
-      behavior: 'smooth' 
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   };
 
@@ -62,7 +62,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             {/* Logo y Navegación */}
             <div className="flex items-center justify-start space-x-8">
-              <button 
+              <button
                 onClick={scrollToTop}
                 className="hidden md:block bg-transparent border-none cursor-pointer"
               >
@@ -71,19 +71,19 @@ const Index = () => {
 
               {/* Desktop Navigation */}
               <nav className="hidden md:flex items-center space-x-8" style={{ fontSize: "1.1rem" }}>
-                <button 
+                <button
                   onClick={() => scrollToSection('servicios')}
                   className="text-white/80 hover:text-white transition-colors bg-transparent border-none cursor-pointer"
                 >
                   Servicios
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('enfoque')}
                   className="text-white/80 hover:text-white transition-colors bg-transparent border-none cursor-pointer"
                 >
                   Enfoque
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('sectores')}
                   className="text-white/80 hover:text-white transition-colors bg-transparent border-none cursor-pointer"
                 >
@@ -94,10 +94,8 @@ const Index = () => {
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity" style={{ backgroundColor: "#19191E", color: "#fff" }}>
-                <a href="https://forms.gle/JNhDtc1dUsjiKRXw8" target="_blank" className="flex items-center gap-2">
-                  Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                </a>
+              <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" style={{ backgroundColor: "#19191E", color: "#fff" }}>
+                Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
               </Button>
             </div>
 
@@ -114,28 +112,26 @@ const Index = () => {
           {isMenuOpen && (
             <div className="md:hidden mt-4 pb-4 border-t border-white/10">
               <nav className="flex flex-col space-y-4 pt-4">
-                <button 
+                <button
                   onClick={() => scrollToSection('servicios')}
                   className="text-white/80 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left"
                 >
                   Servicios
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('enfoque')}
                   className="text-white/80 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left"
                 >
                   Enfoque
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('sectores')}
                   className="text-white/80 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left"
                 >
                   Sectores
                 </button>
-                <Button size="lg" className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity" style={{ backgroundColor: "#19191E", color: "#fff" }}>
-                  <a href="https://forms.gle/JNhDtc1dUsjiKRXw8" target="_blank" className="flex items-center gap-2">
-                    Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                  </a>
+                <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" style={{ backgroundColor: "#19191E", color: "#fff" }}>
+                  Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </Button>
               </nav>
             </div>
@@ -161,10 +157,9 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 pb-4">
               <Button
                 size="lg"
-                className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity"
-                onClick={() => setIsModalOpen(true)}
+                className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta"
               >
-                REALIZA UNA DEMOSTRACIÓN <span className="hidden md:inline">EN VIVO</span>
+                UNETE <span className="hidden md:inline">A LA LISTA DE ESPERA</span>
               </Button>
             </div>
 
@@ -496,10 +491,8 @@ const Index = () => {
               Sin complicaciones técnicas, sin cambios drásticos en tu operación.
             </p>
             <div className="pt-8">
-              <Button size="lg" className="px-12 py-4 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity" >
-                <a href="https://forms.gle/JNhDtc1dUsjiKRXw8" target="_blank" className="flex items-center gap-2">
-                  Agendar demostración<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                </a>
+              <Button size="lg" className="px-12 py-4 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" >
+                Registrate en la lista de espera <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
               </Button>
             </div>
           </div>
@@ -514,7 +507,7 @@ const Index = () => {
             {/* Left Column - Company Info & Socials */}
             <div className="space-y-6" style={{ marginTop: "-10px" }}>
               <div>
-                <button 
+                <button
                   onClick={scrollToTop}
                   className="bg-transparent border-none cursor-pointer"
                 >
