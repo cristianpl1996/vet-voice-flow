@@ -95,7 +95,7 @@ const Index = () => {
             {/* CTA Button */}
             <div className="hidden md:block">
               <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" style={{ backgroundColor: "#19191E", color: "#fff" }}>
-                Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                Registrarse <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
               </Button>
             </div>
 
@@ -131,7 +131,7 @@ const Index = () => {
                   Sectores
                 </button>
                 <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" style={{ backgroundColor: "#19191E", color: "#fff" }}>
-                  Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                Registrarse <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </Button>
               </nav>
             </div>
@@ -492,7 +492,7 @@ const Index = () => {
             </p>
             <div className="pt-8">
               <Button size="lg" className="px-12 py-4 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" >
-                Registrate en la lista de espera <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                REGISTRATE EN LA LISTA DE ESPERA
               </Button>
             </div>
           </div>
