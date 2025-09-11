@@ -93,9 +93,18 @@ const Index = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden md:block">
+            {/* <div className="hidden md:block">
               <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" style={{ backgroundColor: "#19191E", color: "#fff" }}>
                 Registrarse <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </Button>
+            </div> */}
+
+            {/* CTA Button */}
+            <div className="hidden md:block">
+              <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity" style={{ backgroundColor: "#19191E", color: "#fff" }}>
+                <a href="https://forms.gle/JNhDtc1dUsjiKRXw8" target="_blank" className="flex items-center gap-2">
+                  Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
               </Button>
             </div>
 
@@ -130,8 +139,13 @@ const Index = () => {
                 >
                   Sectores
                 </button>
-                <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" style={{ backgroundColor: "#19191E", color: "#fff" }}>
+                {/* <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" style={{ backgroundColor: "#19191E", color: "#fff" }}>
                 Registrarse <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </Button> */}
+                <Button size="lg" className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity" style={{ backgroundColor: "#19191E", color: "#fff" }}>
+                  <a href="https://forms.gle/JNhDtc1dUsjiKRXw8" target="_blank" className="flex items-center gap-2">
+                    Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  </a>
                 </Button>
               </nav>
             </div>
@@ -155,11 +169,18 @@ const Index = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 pb-4">
-              <Button
+              {/* <Button
                 size="lg"
                 className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta"
               >
                 UNETE <span className="hidden md:inline">A LA LISTA DE ESPERA</span>
+              </Button> */}
+              <Button
+                size="lg"
+                className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity"
+                onClick={() => setIsModalOpen(true)}
+              >
+                REALIZA UNA DEMOSTRACIÓN <span className="hidden md:inline">EN VIVO</span>
               </Button>
             </div>
 
@@ -491,8 +512,13 @@ const Index = () => {
               Sin complicaciones técnicas, sin cambios drásticos en tu operación.
             </p>
             <div className="pt-8">
-              <Button size="lg" className="px-12 py-4 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" >
+              {/* <Button size="lg" className="px-12 py-4 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" >
                 REGISTRATE EN LA LISTA DE ESPERA
+              </Button> */}
+              <Button size="lg" className="px-12 py-4 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity" >
+                <a href="https://forms.gle/JNhDtc1dUsjiKRXw8" target="_blank" className="flex items-center gap-2">
+                  Agendar demostración<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
               </Button>
             </div>
           </div>
