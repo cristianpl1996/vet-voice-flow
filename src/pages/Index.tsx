@@ -18,6 +18,7 @@ import { Link } from "react-router-dom";
 import Logo from "@/components/Logo";
 import DemoModal from "@/components/DemoModal";
 import AudioPlayer from "@/components/AudioPlayer";
+import WhatsAppBubble from "@/components/WhatsAppBubble";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -706,6 +707,9 @@ const Index = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />
+
+      {/* WhatsApp Bubble */}
+      <WhatsAppBubble />
     </div>
   );
 };

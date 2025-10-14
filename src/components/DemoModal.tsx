@@ -13,7 +13,7 @@ interface DemoModalProps {
 const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
-  const [profession, setProfession] = useState('');
+  const [hasClinic, setHasClinic] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [isValidPhone, setIsValidPhone] = useState(false);
   const [isValidEmail, setIsValidEmail] = useState(false);
@@ -21,19 +21,10 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const { toast } = useToast();
 
-  // Profesiones completas de la industria veterinaria
-  const veterinaryProfessions = [
-    'Veterinario general',
-    'Auxiliar veterinario',
-    'Técnico veterinario',
-    'Recepcionista de clínica',
-    'Administrador de clínica',
-    'Dueño de clínica',
-    'Director médico',
-    'Farmacéutico veterinario',
-    'Representante de ventas veterinarias',
-    'Estudiante de veterinaria',
-    'Otro'
+  // Opciones para clínica veterinaria
+  const clinicOptions = [
+    'Sí',
+    'No'
   ];
 
   // Validar número de teléfono
@@ -63,7 +54,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
   const resetForm = () => {
     setFullName('');
     setEmail('');
-    setProfession('');
+    setHasClinic('');
     setPhoneNumber('');
     setIsValidPhone(false);
     setIsValidEmail(false);
@@ -73,7 +64,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
   // Manejar envío del formulario
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!isValidPhone || !isValidEmail || !fullName || !profession) return;
+    if (!isValidPhone || !isValidEmail || !fullName || !hasClinic) return;
 
     setIsLoading(true);
     try {
@@ -85,7 +76,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
         body: JSON.stringify({
           fullName: fullName,
           email: email,
-          profession: profession,
+          hasClinic: hasClinic,
           phoneNumber: phoneNumber,
           date: new Date().toISOString()
         }),
@@ -252,25 +243,25 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
               </div>
             </div>
 
-            {/* Profesión */}
+            {/* ¿Tienes clínica veterinaria? */}
             <div>
               <label className="block text-white/80 text-sm font-medium mb-2">
                 <Briefcase className="w-4 h-4 inline mr-2" />
-                Profesión en la industria veterinaria
+                ¿Tienes clínica veterinaria?
               </label>
               <select
-                value={profession}
-                onChange={(e) => setProfession(e.target.value)}
+                value={hasClinic}
+                onChange={(e) => setHasClinic(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-primary transition-colors"
                 style={{
                   appearance: 'none',
                 }}
                 required
               >
-                <option value="" className="bg-background text-white">Selecciona tu profesión</option>
-                {veterinaryProfessions.map((prof) => (
-                  <option key={prof} value={prof} className="bg-background text-white">
-                    {prof}
+                <option value="" className="bg-background text-white">Selecciona una opción</option>
+                {clinicOptions.map((option) => (
+                  <option key={option} value={option} className="bg-background text-white">
+                    {option}
                   </option>
                 ))}
               </select>
@@ -307,7 +298,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
 
             <Button
               type="submit"
-              disabled={!isValidPhone || !isValidEmail || !fullName || !profession || isLoading}
+              disabled={!isValidPhone || !isValidEmail || !fullName || !hasClinic || isLoading}
               className="w-full bg-gradient-primary hover:opacity-90 transition-opacity disabled:opacity-50"
             >
               <SendHorizontal className="w-5 h-5 mr-2" />
