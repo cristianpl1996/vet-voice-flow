@@ -65,7 +65,7 @@ const Index = () => {
             <div className="flex items-center justify-start space-x-8">
               <button
                 onClick={scrollToTop}
-                className="hidden md:block bg-transparent border-none cursor-pointer"
+                className="bg-transparent border-none cursor-pointer"
               >
                 <Logo />
               </button>
@@ -93,19 +93,9 @@ const Index = () => {
               </nav>
             </div>
 
-            {/* CTA Button */}
-            {/* <div className="hidden md:block">
-              <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" style={{ backgroundColor: "#19191E", color: "#fff" }}>
-                Registrarse <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </Button>
-            </div> */}
-
-            {/* CTA Button */}
             <div className="hidden md:block">
-              <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity" style={{ backgroundColor: "#19191E", color: "#fff" }}>
-                <a href="https://forms.gle/JNhDtc1dUsjiKRXw8" target="_blank" className="flex items-center gap-2">
+              <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity" style={{ backgroundColor: "#19191E", color: "#fff" }} onClick={() => setIsModalOpen(true)}>
                   Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                </a>
               </Button>
             </div>
 
@@ -140,13 +130,9 @@ const Index = () => {
                 >
                   Sectores
                 </button>
-                {/* <Button size="lg" className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" style={{ backgroundColor: "#19191E", color: "#fff" }}>
-                Registrarse <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                </Button> */}
-                <Button size="lg" className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity" style={{ backgroundColor: "#19191E", color: "#fff" }}>
-                  <a href="https://forms.gle/JNhDtc1dUsjiKRXw8" target="_blank" className="flex items-center gap-2">
-                    Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                  </a>
+
+                <Button size="lg" className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity" style={{ backgroundColor: "#19191E", color: "#fff" }} onClick={() => setIsModalOpen(true)}>
+                  Agendar  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </Button>
               </nav>
             </div>
@@ -171,8 +157,8 @@ const Index = () => {
 
             {/* Reproductor de Audio */}
             <div>
-              <AudioPlayer 
-                src="https://api.foneia.com/media/resources/backgrounds/people_in_lounge.mp3"
+              <AudioPlayer
+                src="https://api.foneia.com/media/resources/calls/call_example.mp3"
               />
             </div>
 
@@ -520,13 +506,8 @@ const Index = () => {
               Sin complicaciones técnicas, sin cambios drásticos en tu operación.
             </p>
             <div className="pt-8">
-              {/* <Button size="lg" className="px-12 py-4 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity prefinery-form-cta" >
-                REGISTRATE EN LA LISTA DE ESPERA
-              </Button> */}
-              <Button size="lg" className="px-12 py-4 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity" >
-                <a href="https://forms.gle/JNhDtc1dUsjiKRXw8" target="_blank" className="flex items-center gap-2">
-                  Agendar demostración<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                </a>
+              <Button size="lg" className="px-12 py-4 text-lg font-semibold bg-gradient-primary hover:opacity-90 transition-opacity" onClick={() => setIsModalOpen(true)}>
+                  RESERVA TU DEMOSTRACIÓN <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
               </Button>
             </div>
           </div>

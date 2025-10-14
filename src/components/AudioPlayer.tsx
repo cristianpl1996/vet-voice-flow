@@ -73,7 +73,7 @@ const AudioPlayer = ({ src, duration: durationText = "2:15" }: AudioPlayerProps)
   const progress = audioDuration > 0 ? (currentTime / audioDuration) * 100 : 0;
 
   return (
-    <div className="w-2/3 max-w-4xl mx-auto">
+    <div className="w-full md:w-2/3 max-w-4xl mx-auto">
       {/* Reproductor de audio */}
       <div className="relative bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/50">
         {/* Waveform visual */}

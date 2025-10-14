@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Phone, MessageSquare, X, CheckCircle, User, Briefcase } from "lucide-react";
+import { Phone, X, CheckCircle, User, Briefcase, Mail, SendHorizontal } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
@@ -12,11 +11,12 @@ interface DemoModalProps {
 }
 
 const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
-  const [selectedOption, setSelectedOption] = useState<'voice' | 'whatsapp'>('voice');
   const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
   const [profession, setProfession] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [isValidPhone, setIsValidPhone] = useState(false);
+  const [isValidEmail, setIsValidEmail] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
@@ -43,35 +43,49 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
     return phoneRegex.test(phone);
   };
 
+  // Validar email
+  const validateEmail = (email: string) => {
+    if (!email) return false;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   useEffect(() => {
     setIsValidPhone(validatePhone(phoneNumber));
   }, [phoneNumber]);
 
+  useEffect(() => {
+    setIsValidEmail(validateEmail(email));
+  }, [email]);
+
   // Limpiar formulario
   const resetForm = () => {
     setFullName('');
+    setEmail('');
     setProfession('');
     setPhoneNumber('');
     setIsValidPhone(false);
+    setIsValidEmail(false);
   };
 
-  // Manejar envío del formulario de voz
-  const handleVoiceSubmit = async (e: React.FormEvent) => {
+  // Manejar envío del formulario
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!isValidPhone || !fullName || !profession) return;
+    if (!isValidPhone || !isValidEmail || !fullName || !profession) return;
 
     setIsLoading(true);
     try {
-      const response = await fetch('https://n8n.bettercode.com.co/webhook/26cd3c1d-5171-48ca-9f1f-ccb4b7991dae', {
+      const response = await fetch('https://n8n.bettercode.com.co/webhook/8c1a2186-75ac-40f2-ac88-ccfb9d92a9a3', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           fullName: fullName,
+          email: email,
           profession: profession,
           phoneNumber: phoneNumber,
-          type: 'voice_demo'
+          date: new Date().toISOString()
         }),
       });
 
@@ -83,7 +97,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
         // Mostrar toast de confirmación
         toast({
           title: "¡Formulario enviado exitosamente! ✅",
-          description: "Nuestro agente te contactará pronto para realizar la demostración personalizada.",
+          description: "Nos pondremos en contacto contigo pronto para agendar tu demostración personalizada.",
           variant: "default",
           duration: 5000,
         });
@@ -108,10 +122,6 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
     }
   };
 
-  // Manejar redirección a WhatsApp
-  const handleWhatsAppRedirect = () => {
-    window.open('https://shorturl.at/pMIkp', '_blank');
-  };
 
   // Cerrar modal con Escape
   useEffect(() => {
@@ -154,7 +164,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-white/10 flex-shrink-0">
           <h2 className="text-2xl font-bold text-white">
-            Demostración en vivo
+            Agendar demostración
           </h2>
           <button
             onClick={onClose}
@@ -167,199 +177,138 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
         {/* Content */}
         <div className="p-6 overflow-y-auto flex-1">
           <p className="text-white/80 mb-6 text-center">
-            Elige cómo quieres probar nuestro agente inteligente
+            Completa tus datos para agendar una demostración personalizada
           </p>
 
-          {/* Options */}
-          <div className="grid grid-cols-2 gap-4 mb-6">
-            {/* Voice Option */}
-            <Card
-              className={`cursor-pointer transition-all duration-200 hover:scale-105 ${selectedOption === 'voice'
-                ? 'border-primary'
-                : 'border-white/10 hover:border-primary/50'
-                }`}
-              onClick={() => setSelectedOption('voice')}
-            >
-              <CardContent className="p-6 text-center">
-                <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${selectedOption === 'voice'
-                  ? 'bg-gradient-to-br from-primary to-integration'
-                  : 'bg-white/10'
-                  }`}>
-                  <Phone className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-sm md:text-lg font-bold text-white mb-2">
-                  <span className="hidden md:inline">
-                    Agente de Voz
-                  </span>
-                  <span className="md:hidden">
-                    Agente Voz
-                  </span>
-                </h3>
-                <p className="text-white/60 text-sm hidden md:block">
-                  Prueba nuestro agente de voz inteligente
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* WhatsApp Option */}
-            <Card
-              className={`cursor-pointer transition-all duration-200 hover:scale-105 ${selectedOption === 'whatsapp'
-                ? 'border-secondary'
-                : 'border-white/10 hover:border-secondary/50'
-                }`}
-              onClick={() => setSelectedOption('whatsapp')}
-            >
-              <CardContent className="p-6 text-center">
-                <div className={`w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center ${selectedOption === 'whatsapp'
-                  ? 'bg-gradient-to-br from-secondary to-integration'
-                  : 'bg-white/10'
-                  }`}>
-                  <MessageSquare className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-sm md:text-lg font-bold text-white mb-2">
-                  WhatsApp
-                </h3>
-                <p className="text-white/60 text-sm hidden md:block">
-                  Chatea directamente con nuestro agente inteligente
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Voice Form */}
-          {selectedOption === 'voice' && (
-            <form onSubmit={handleVoiceSubmit} className="space-y-4">
-              {/* Mensaje informativo */}
-              <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-white/90 text-sm font-medium mb-1">
-                      Nuestro agente te llamará
-                    </p>
-                    <p className="text-white/70 text-xs">
-                      Con los datos proporcionados, nuestro agente inteligente te contactará para realizar una demostración personalizada de nuestras capacidades.
-                    </p>
-                  </div>
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Mensaje informativo */}
+            <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
+              <div className="flex items-start gap-3">
+                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-white/90 text-sm font-medium mb-1">
+                    Te contactaremos pronto
+                  </p>
+                  <p className="text-white/70 text-xs">
+                    Con los datos proporcionados, nuestro equipo te contactará para agendar una demostración personalizada de nuestras capacidades.
+                  </p>
                 </div>
               </div>
+            </div>
 
-              {/* Nombre completo */}
-              <div>
-                <label className="block text-white/80 text-sm font-medium mb-2">
-                  <User className="w-4 h-4 inline mr-2" />
-                  Nombre completo
-                </label>
+            {/* Nombre completo */}
+            <div>
+              <label className="block text-white/80 text-sm font-medium mb-2">
+                <User className="w-4 h-4 inline mr-2" />
+                Nombre completo
+              </label>
+              <input
+                type="text"
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                placeholder="Ingresa tu nombre completo"
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-primary transition-colors"
+                required
+              />
+            </div>
+
+            {/* Correo electrónico */}
+            <div>
+              <label className="block text-white/80 text-sm font-medium mb-2">
+                <Mail className="w-4 h-4 inline mr-2" />
+                Correo electrónico
+              </label>
+              <div className="relative">
                 <input
-                  type="text"
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
-                  placeholder="Ingresa tu nombre completo"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="tu@email.com"
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-primary transition-colors"
                   required
                 />
-              </div>
-
-              {/* Profesión */}
-              <div>
-                <label className="block text-white/80 text-sm font-medium mb-2">
-                  <Briefcase className="w-4 h-4 inline mr-2" />
-                  Profesión en la industria veterinaria
-                </label>
-                <select
-                  value={profession}
-                  onChange={(e) => setProfession(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-primary transition-colors"
-                  style={{
-                    appearance: 'none',
-                  }}
-                  required
-                >
-                  <option value="" className="bg-background text-white">Selecciona tu profesión</option>
-                  {veterinaryProfessions.map((prof) => (
-                    <option key={prof} value={prof} className="bg-background text-white">
-                      {prof}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Número de teléfono con selector de país */}
-              <div>
-                <label className="block text-white/80 text-sm font-medium mb-2">
-                  <Phone className="w-4 h-4 inline mr-2" />
-                  Número de teléfono
-                </label>
-                <div className="relative">
-                  <PhoneInput
-                    international
-                    defaultCountry="CO"
-                    value={phoneNumber}
-                    onChange={(value) => setPhoneNumber(value || '')}
-                    placeholder="+57 310 2523739"
-
-                  />
-                  {phoneNumber && (
-                    <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                      {isValidPhone ? (
-                        <CheckCircle className="w-5 h-5 text-green-400" />
-                      ) : (
-                        <X className="w-5 h-5 text-red-400" />
-                      )}
-                    </div>
-                  )}
-                </div>
-                <p className="text-xs text-white/60 mt-1">
-                  Selecciona tu país y ingresa tu número de teléfono
-                </p>
-              </div>
-
-              <Button
-                type="submit"
-                disabled={!isValidPhone || !fullName || !profession || isLoading}
-                className="w-full bg-gradient-primary hover:opacity-90 transition-opacity disabled:opacity-50"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                {isLoading ? (
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    Procesando...
+                {email && (
+                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                    {isValidEmail ? (
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                    ) : (
+                      <X className="w-5 h-5 text-red-400" />
+                    )}
                   </div>
-                ) : (
-                  'Iniciar demostración de voz'
                 )}
-              </Button>
-            </form>
-          )}
-
-          {/* WhatsApp Redirect */}
-          {selectedOption === 'whatsapp' && (
-            <div className="space-y-4">
-
-              {/* Mensaje informativo */}
-              <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-white/90 text-sm font-medium mb-1">
-                      Redirigir a WhatsApp
-                    </p>
-                    <p className="text-white/70 text-xs">
-                      Serás redirigido a WhatsApp para comenzar la conversación con nuestro agente inteligente.
-                    </p>
-                  </div>
-                </div>
               </div>
-
-              <Button
-                onClick={handleWhatsAppRedirect}
-                className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:opacity-90 transition-opacity"
-              >
-                <MessageSquare className="w-5 h-5 mr-2" />
-                Iniciar demostración en WhatsApp
-              </Button>
             </div>
-          )}
+
+            {/* Profesión */}
+            <div>
+              <label className="block text-white/80 text-sm font-medium mb-2">
+                <Briefcase className="w-4 h-4 inline mr-2" />
+                Profesión en la industria veterinaria
+              </label>
+              <select
+                value={profession}
+                onChange={(e) => setProfession(e.target.value)}
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-primary transition-colors"
+                style={{
+                  appearance: 'none',
+                }}
+                required
+              >
+                <option value="" className="bg-background text-white">Selecciona tu profesión</option>
+                {veterinaryProfessions.map((prof) => (
+                  <option key={prof} value={prof} className="bg-background text-white">
+                    {prof}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Número de teléfono con selector de país */}
+            <div>
+              <label className="block text-white/80 text-sm font-medium mb-2">
+                <Phone className="w-4 h-4 inline mr-2" />
+                Número de teléfono
+              </label>
+              <div className="relative">
+                <PhoneInput
+                  international
+                  defaultCountry="CO"
+                  value={phoneNumber}
+                  onChange={(value) => setPhoneNumber(value || '')}
+                  placeholder="+57 310 2523739"
+                />
+                {phoneNumber && (
+                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                    {isValidPhone ? (
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                    ) : (
+                      <X className="w-5 h-5 text-red-400" />
+                    )}
+                  </div>
+                )}
+              </div>
+              <p className="text-xs text-white/60 mt-1">
+                Selecciona tu país y ingresa tu número de teléfono
+              </p>
+            </div>
+
+            <Button
+              type="submit"
+              disabled={!isValidPhone || !isValidEmail || !fullName || !profession || isLoading}
+              className="w-full bg-gradient-primary hover:opacity-90 transition-opacity disabled:opacity-50"
+            >
+              <SendHorizontal className="w-5 h-5 mr-2" />
+              {isLoading ? (
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  Procesando...
+                </div>
+              ) : (
+                'Enviar información'
+              )}
+            </Button>
+          </form>
         </div>
       </div>
     </div>
