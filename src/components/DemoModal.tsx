@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, X, CheckCircle, User, Briefcase, Mail, SendHorizontal } from "lucide-react";
+import { Phone, X, CheckCircle, User, Briefcase, Mail, SendHorizontal, Presentation, MessageCircle, ExternalLink } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
@@ -18,6 +18,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
   const [isValidPhone, setIsValidPhone] = useState(false);
   const [isValidEmail, setIsValidEmail] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const { toast } = useToast();
 
   // Profesiones completas de la industria veterinaria
@@ -66,6 +67,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
     setPhoneNumber('');
     setIsValidPhone(false);
     setIsValidEmail(false);
+    setIsFormSubmitted(false);
   };
 
   // Manejar envío del formulario
@@ -90,9 +92,8 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
       });
 
       if (response.ok) {
-        // Cerrar modal inmediatamente
-        onClose();
-        resetForm();
+        // Marcar formulario como enviado exitosamente
+        setIsFormSubmitted(true);
 
         // Mostrar toast de confirmación
         toast({
@@ -122,6 +123,15 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
     }
   };
 
+  // Manejar redirección a presentación
+  const handleViewPresentation = () => {
+    window.open('https://ejemplo.com/presentacion', '_blank');
+  };
+
+  // Manejar redirección a WhatsApp
+  const handleJoinWhatsApp = () => {
+    window.open('https://wa.me/573001234567', '_blank');
+  };
 
   // Cerrar modal con Escape
   useEffect(() => {
@@ -176,12 +186,14 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
 
         {/* Content */}
         <div className="p-6 overflow-y-auto flex-1">
-          <p className="text-white/80 mb-6 text-center">
-            Completa tus datos para agendar una demostración personalizada
-          </p>
+          {!isFormSubmitted ? (
+            <>
+              <p className="text-white/80 mb-6 text-center">
+                Completa tus datos para agendar una demostración personalizada
+              </p>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Form */}
+              <form onSubmit={handleSubmit} className="space-y-4">
             {/* Mensaje informativo */}
             <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
               <div className="flex items-start gap-3">
@@ -309,6 +321,81 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
               )}
             </Button>
           </form>
+            </>
+          ) : (
+            <>
+              {/* Mensaje de éxito */}
+              <div className="text-center mb-8">
+                <div className="mx-auto w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mb-4">
+                  <CheckCircle className="w-8 h-8 text-green-400" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  ¡Gracias por tu interés!
+                </h3>
+                <p className="text-white/80">
+                  Tu información ha sido enviada exitosamente. Te contactaremos pronto.
+                </p>
+              </div>
+
+              {/* Cards de opciones */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Card: Ver presentación */}
+                <div 
+                  onClick={handleViewPresentation}
+                  className="group bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-blue-400/30 rounded-xl p-6 cursor-pointer hover:border-blue-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20"
+                >
+                  <div className="flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
+                      <Presentation className="w-6 h-6 text-blue-400" />
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2 text-center">
+                    Ver presentación
+                  </h4>
+                  <p className="text-white/70 text-sm text-center mb-4">
+                    Descubre todas las funcionalidades de Hubu en nuestra presentación interactiva
+                  </p>
+                  <div className="flex items-center justify-center text-blue-400 text-sm font-medium group-hover:text-blue-300 transition-colors">
+                    <ExternalLink className="w-4 h-4 mr-1" />
+                    Ver ahora
+                  </div>
+                </div>
+
+                {/* Card: Unirse a WhatsApp */}
+                <div 
+                  onClick={handleJoinWhatsApp}
+                  className="group bg-gradient-to-br from-green-500/20 to-emerald-600/20 border border-green-400/30 rounded-xl p-6 cursor-pointer hover:border-green-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20"
+                >
+                  <div className="flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center group-hover:bg-green-500/30 transition-colors">
+                      <MessageCircle className="w-6 h-6 text-green-400" />
+                    </div>
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2 text-center">
+                    Unirse a la comunidad
+                  </h4>
+                  <p className="text-white/70 text-sm text-center mb-4">
+                    Conecta con otros profesionales veterinarios en nuestra comunidad de WhatsApp
+                  </p>
+                  <div className="flex items-center justify-center text-green-400 text-sm font-medium group-hover:text-green-300 transition-colors">
+                    <ExternalLink className="w-4 h-4 mr-1" />
+                    Unirse ahora
+                  </div>
+                </div>
+              </div>
+
+              {/* Botón para cerrar */}
+              <div className="mt-8 text-center">
+                <Button
+                  onClick={onClose}
+                  variant="outline"
+                  className="border-white/20 text-white hover:bg-white/10"
+                >
+                  Cerrar
+                </Button>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
