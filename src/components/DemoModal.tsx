@@ -165,7 +165,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-white/10 flex-shrink-0">
           <h2 className="text-2xl font-bold text-white">
-            Agendar demostración
+            Formulario de información
           </h2>
           <button
             onClick={onClose}
