@@ -125,12 +125,12 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
 
   // Manejar redirección a presentación
   const handleViewPresentation = () => {
-    window.open('https://ejemplo.com/presentacion', '_blank');
+    window.open('https://slides.hubu.com.co', '_blank');
   };
 
   // Manejar redirección a WhatsApp
   const handleJoinWhatsApp = () => {
-    window.open('https://wa.me/573001234567', '_blank');
+    window.open('https://chat.whatsapp.com/KTXzNY274sN5ZaYaJ57qn9?mode=wwt', '_blank');
   };
 
   // Cerrar modal con Escape
