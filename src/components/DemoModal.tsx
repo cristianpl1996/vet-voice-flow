@@ -247,7 +247,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
             <div>
               <label className="block text-white/80 text-sm font-medium mb-2">
                 <Briefcase className="w-4 h-4 inline mr-2" />
-                ¿Tienes clínica veterinaria?
+                ¿Tienes clínica veterinaria o pet shop?
               </label>
               <select
                 value={hasClinic}
