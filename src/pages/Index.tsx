@@ -17,6 +17,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "@/components/Logo";
 import DemoModal from "@/components/DemoModal";
+import AudioPlayer from "@/components/AudioPlayer";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -168,6 +169,13 @@ const Index = () => {
               Automatiza llamadas y mensajes con un agente entrenado en el lenguaje real de la industria veterinaria.
             </p>
 
+            {/* Reproductor de Audio */}
+            <div>
+              <AudioPlayer 
+                src="https://api.foneia.com/media/resources/backgrounds/people_in_lounge.mp3"
+              />
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 pb-4">
               {/* <Button
                 size="lg"
@@ -180,7 +188,7 @@ const Index = () => {
                 className="px-8 py-4 text-lg bg-gradient-primary hover:opacity-90 transition-opacity"
                 onClick={() => setIsModalOpen(true)}
               >
-                REALIZA UNA DEMOSTRACIÓN <span className="hidden md:inline">EN VIVO</span>
+                AGENDA UNA DEMOSTRACIÓN <span className="hidden md:inline">EN VIVO</span>
               </Button>
             </div>
 
