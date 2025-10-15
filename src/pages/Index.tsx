@@ -102,7 +102,7 @@ const Index = () => {
 
             <div className="hidden md:block">
               <Button
-                size="lg"
+                size="sm"
                 className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity"
                 style={{ backgroundColor: "#19191E", color: "#fff" }}
                 onClick={() => setIsModalOpen(true)}
@@ -743,7 +743,7 @@ const Index = () => {
                   <div className="w-6 h-6 bg-secondary/20 rounded flex items-center justify-center">
                     <Phone className="w-4 h-4 text-secondary" />
                   </div>
-                  <span className="text-white/80 text-sm">+57 310 2523739</span>
+                  <span className="text-white/80 text-sm">+57 305 2828129</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-integration/20 rounded flex items-center justify-center">

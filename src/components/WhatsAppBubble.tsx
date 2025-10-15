@@ -7,7 +7,7 @@ const WhatsAppBubble = () => {
   const handleWhatsAppClick = () => {
     // URL de WhatsApp con mensaje predefinido
     const message = encodeURIComponent("¡Hola! Me interesa conocer más sobre Hubu y sus servicios para clínicas veterinarias.");
-    const phoneNumber = "573102523739"; // Número de teléfono de Hubu
+    const phoneNumber = "573052828129"; // Número de teléfono de Hubu
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     
     window.open(whatsappUrl, '_blank');
@@ -42,9 +42,11 @@ const WhatsAppBubble = () => {
           <MessageCircle className="w-8 h-8 text-white" />
           
           {/* Indicador de notificación */}
-          <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
-            <span className="text-xs text-white font-bold">1</span>
-          </div>
+          {!isOpen && (
+            <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
+              <span className="text-xs text-white font-bold">1</span>
+            </div>
+          )}
         </button>
 
         {/* Panel expandido */}
