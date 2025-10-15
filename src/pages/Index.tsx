@@ -66,10 +66,10 @@ const Index = () => {
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Logo y Navegación */}
-            <div className="flex items-center justify-start space-x-8">
+            <div className="flex items-center space-x-8">
               <button
                 onClick={scrollToTop}
-                className="bg-transparent border-none cursor-pointer"
+                className="bg-transparent border-none cursor-pointer mr-auto"
               >
                 <Logo />
               </button>
@@ -622,7 +622,7 @@ const Index = () => {
               <div>
                 <button
                   onClick={scrollToTop}
-                  className="bg-transparent border-none cursor-pointer"
+                  className="bg-transparent border-none cursor-pointer mr-auto"
                 >
                   <Logo />
                 </button>
