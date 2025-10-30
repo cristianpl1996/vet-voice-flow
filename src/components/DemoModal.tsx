@@ -68,7 +68,7 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
 
     setIsLoading(true);
     try {
-      const response = await fetch('https://n8n.bettercode.com.co/webhook/8c1a2186-75ac-40f2-ac88-ccfb9d92a9a3', {
+      const response = await fetch('https://n8n.bettercode.com.co/webhook/86fde622-4920-48e3-91d5-db52fa434c54', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -78,7 +78,9 @@ const DemoModal = ({ isOpen, onClose }: DemoModalProps) => {
           email: email,
           hasClinic: hasClinic,
           phoneNumber: phoneNumber,
-          date: new Date().toISOString()
+          date: new Date().toISOString(),
+          status: 'Nuevo',
+          channel: 'Landing Page',
         }),
       });
 

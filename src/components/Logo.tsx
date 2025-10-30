@@ -13,7 +13,7 @@ const Logo = ({ className = "", showText = true }: LogoProps) => {
         <img 
           src="/logo.png" 
           alt="Logo" 
-          className="w-full h-full object-contain"
+          className="h-full object-contain"
           onError={(e) => {
             // Fallback si la imagen no se carga
             const target = e.target as HTMLImageElement;

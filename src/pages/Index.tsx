@@ -63,13 +63,13 @@ const Index = () => {
         className="fixed top-0 left-0 right-0 z-50 glass"
         style={{ border: "none" }}
       >
-        <div className="container mx-auto px-4 py-3">
+        <div className="w-full px-4 md:px-6 py-3">
           <div className="flex items-center justify-between">
             {/* Logo y Navegación */}
             <div className="flex items-center space-x-8">
               <button
                 onClick={scrollToTop}
-                className="bg-transparent border-none cursor-pointer mr-auto"
+                className="bg-transparent border-none cursor-pointer"
               >
                 <Logo />
               </button>
@@ -605,7 +605,8 @@ const Index = () => {
                   )
                 }
               >
-                UNETE A NUESTRA COMUNIDAD
+                <span className="hidden md:inline">UNETE A NUESTRA COMUNIDAD DE WHATSAPP</span>
+                <span className="md:hidden">UNETE A WHATSAPP</span>
               </Button>
             </div>
           </div>
