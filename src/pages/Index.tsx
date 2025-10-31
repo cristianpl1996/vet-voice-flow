@@ -63,8 +63,8 @@ const Index = () => {
         className="fixed top-0 left-0 right-0 z-50 glass"
         style={{ border: "none" }}
       >
-        <div className="w-full px-4 md:px-6 py-3">
-          <div className="flex items-center justify-between">
+        <div className="w-full">
+          <div className="container mx-auto max-w-6xl px-4 md:px-6 py-2 flex items-center justify-between">
             {/* Logo y Navegación */}
             <div className="flex items-center space-x-8">
               <button
@@ -76,24 +76,23 @@ const Index = () => {
 
               {/* Desktop Navigation */}
               <nav
-                className="hidden md:flex items-center space-x-8"
-                style={{ fontSize: "1.1rem" }}
+                className="hidden md:flex items-center space-x-8 text-[1rem]"
               >
                 <button
                   onClick={() => scrollToSection("servicios")}
-                  className="text-white/80 hover:text-white transition-colors bg-transparent border-none cursor-pointer"
+                  className="text-white/80 hover:text-white transition-colors bg-transparent border-none cursor-pointer font-medium"
                 >
                   Servicios
                 </button>
                 <button
                   onClick={() => scrollToSection("enfoque")}
-                  className="text-white/80 hover:text-white transition-colors bg-transparent border-none cursor-pointer"
+                  className="text-white/80 hover:text-white transition-colors bg-transparent border-none cursor-pointer font-medium"
                 >
                   Enfoque
                 </button>
                 <button
                   onClick={() => scrollToSection("sectores")}
-                  className="text-white/80 hover:text-white transition-colors bg-transparent border-none cursor-pointer"
+                  className="text-white/80 hover:text-white transition-colors bg-transparent border-none cursor-pointer font-medium"
                 >
                   Sectores
                 </button>
@@ -103,22 +102,21 @@ const Index = () => {
             <div className="hidden md:block">
               <Button
                 size="sm"
-                className="px-6 py-4 text-md bg-gradient-primary hover:opacity-90 transition-opacity"
-                style={{ backgroundColor: "#19191E", color: "#fff" }}
+                className="px-5 py-2 text-sm rounded-full bg-gradient-primary text-white shadow-lg hover:opacity-90 transition-opacity"
                 onClick={() => setIsModalOpen(true)}
               >
-                Agendar{" "}
+                Agendar
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-arrow-right h-5 w-5"
+                  className="lucide lucide-arrow-right h-4 w-4 ml-2"
                 >
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
@@ -141,7 +139,7 @@ const Index = () => {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t border-white/10">
+            <div className="md:hidden mt-4 pb-4 border-t border-white/10 container mx-auto max-w-6xl px-4 md:px-6">
               <nav className="flex flex-col space-y-4 pt-4">
                 <button
                   onClick={() => scrollToSection("servicios")}

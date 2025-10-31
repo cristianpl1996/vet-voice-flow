@@ -9,7 +9,7 @@ const Logo = ({ className = "", showText = true }: LogoProps) => {
   return (
     <div className={`flex items-center space-x-2 ${className}`}>
       {/* Logo Image */}
-      <div className="relative mb-2" style={{ width: "auto", height: "3.3rem" }}>
+      <div className="relative mb-2" style={{ width: "auto", height: "3.5rem" }}>
         <img 
           src="/logo.png" 
           alt="Logo" 
