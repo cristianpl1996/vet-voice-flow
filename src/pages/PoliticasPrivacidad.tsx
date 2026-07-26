@@ -39,7 +39,10 @@ const PoliticasPrivacidad = () => {
               POLÍTICAS DE TRATAMIENTO DE DATOS PERSONALES OSYVA INC S.A.S
             </h1>
             <p className="text-xl text-foreground-muted max-w-2xl mx-auto">
-              Marzo 15, 2021
+              Vigente desde: Marzo 15, 2021
+            </p>
+            <p className="text-base text-foreground-muted max-w-2xl mx-auto mt-1">
+              Última actualización: Julio 25, 2026
             </p>
           </div>
 
@@ -72,6 +75,10 @@ const PoliticasPrivacidad = () => {
                       <h3 className="font-bold text-white mb-2">Sitio Web:</h3>
                       <p className="text-foreground-muted">https://www.osyva.com/</p>
                     </div>
+                    <div>
+                      <h3 className="font-bold text-white mb-2">Marcas y productos cubiertos:</h3>
+                      <p className="text-foreground-muted">Hubu (https://www.hubu.com.co) es una marca y producto de OSYVA INC S.A.S. Esta Política aplica por igual a Osyva y a Hubu.</p>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -85,6 +92,9 @@ const PoliticasPrivacidad = () => {
                 </h2>
                 <p className="text-foreground-muted leading-relaxed mb-4">
                   OSYVA INC S.A.S en adelante " Osyva INC", identificado con NIT 901400277 - 8, actuando como RESPONSABLE DEL TRATAMIENTO y propietario del Sitio https://www.osyva.com/start (en adelante OSYVA), está comprometido con el respeto y la protección de los datos personales que tenemos a nuestra disposición, por eso, disponemos de la presente Política de Tratamiento de datos personales, para garantizar el adecuado cumplimiento de la Ley 1581 de 2012, el Decreto 1377 de 2013 y las demás disposiciones que reglamentan la materia.
+                </p>
+                <p className="text-foreground-muted leading-relaxed mb-4">
+                  Esta Política cubre igualmente a Hubu (https://www.hubu.com.co), marca y producto de OSYVA INC S.A.S. Toda referencia a "Osyva INC" en este documento comprende también a Hubu y a los servicios prestados a través de dicha plataforma.
                 </p>
                 <p className="text-foreground-muted leading-relaxed mb-4">
                   El Usuario que usa los servicios de Osyva INC o simplemente quien acepta el tratamiento de los datos por parte de Osyva INC, debe conocer y aceptar las siguientes Políticas de Tratamiento de Datos personales("Políticas de Datos").
@@ -320,7 +330,7 @@ const PoliticasPrivacidad = () => {
             <Card className="glass border-white/10 shadow-lg">
               <CardContent className="p-8">
                 <h2 className="font-heading text-2xl font-bold text-white mb-4">
-                  8. FINALIDAD DEL TRATAMIENTO DE LOS DATOS PERSONALES
+                  6. FINALIDAD DEL TRATAMIENTO DE LOS DATOS PERSONALES
                 </h2>
                 <p className="text-foreground-muted leading-relaxed mb-4">
                   Osyva INC en su condición de Responsable y/o Encargado del tratamiento de la información de carácter personal que recopile, almacene, actualice, transmita o suprima datos de sus Usuarios, personas naturales y/o representantes legales de los Laboratorios, Distribuidores y Almacenes registrados, Socios, empleados, proveedores y comunidad en general, les da tratamiento a los datos para las finalidades descritas a continuación:
@@ -353,10 +363,48 @@ const PoliticasPrivacidad = () => {
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                     <span className="text-foreground-muted">
-                      Transferir información del TITULAR a los laboratorios registrados en nuestro Sitio para finalidades de mercadeo.
+                      Transferir información del TITULAR a los laboratorios registrados en nuestro Sitio para finalidades de mercadeo. Esta finalidad no aplica en ningún caso a los datos obtenidos a través de las APIs de Google, los cuales se rigen exclusivamente por lo dispuesto en la sección 7 de esta Política.
                     </span>
                   </div>
                 </div>
+                <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 mt-6">
+                  <p className="text-foreground-muted leading-relaxed">
+                    <strong className="text-white">Exclusión aplicable a datos de Google:</strong> ninguna de las finalidades descritas en esta sección se extiende a los datos que Osyva INC / Hubu recibe de las APIs de Google. Dichos datos se tratan únicamente para prestar y mejorar las funcionalidades visibles al usuario dentro de la plataforma, conforme a la sección 7.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Uso Limitado de datos de las APIs de Google */}
+            <Card className="glass border-white/10 shadow-lg">
+              <CardContent className="p-8">
+                <h2 className="font-heading text-2xl font-bold text-white mb-4">
+                  7. USO LIMITADO DE LOS DATOS DE LAS APIs DE GOOGLE
+                </h2>
+                <p className="text-foreground-muted leading-relaxed mb-4">
+                  Hubu ofrece una integración opcional con Google Calendar. Cuando el usuario la autoriza expresamente mediante el consentimiento de Google (OAuth), Hubu accede a los eventos de su calendario con el único fin de mostrar su disponibilidad dentro de la plataforma y crear, actualizar o eliminar los eventos correspondientes a las citas y agendamientos gestionados en Hubu. El usuario puede revocar este acceso en cualquier momento desde{" "}
+                  <a
+                    href="https://myaccount.google.com/permissions"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline hover:opacity-80"
+                  >
+                    la configuración de permisos de su cuenta de Google
+                  </a>
+                  {" "}o solicitando su eliminación a team@osyva.com.
+                </p>
+                <p className="text-foreground-muted leading-relaxed">
+                  El uso y la transferencia de la información recibida de las APIs de Google por parte de Hubu se ajustará a la{" "}
+                  <a
+                    href="https://developers.google.com/terms/api-services-user-data-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline hover:opacity-80"
+                  >
+                    Política de Datos de Usuario de los Servicios de las APIs de Google
+                  </a>
+                  , incluidos los requisitos de Uso Limitado. Hubu no usa los datos de Google Calendar para publicidad, no los vende ni los transfiere a terceros salvo lo necesario para prestar el servicio, cumplir la ley o con tu consentimiento explícito.
+                </p>
               </CardContent>
             </Card>
 
@@ -364,7 +412,7 @@ const PoliticasPrivacidad = () => {
             <Card className="glass border-white/10 shadow-lg">
               <CardContent className="p-8">
                 <h2 className="font-heading text-2xl font-bold text-white mb-4">
-                  10. DERECHOS DEL TITULAR DE LA INFORMACIÓN
+                  8. DERECHOS DEL TITULAR DE LA INFORMACIÓN
                 </h2>
                 <p className="text-foreground-muted leading-relaxed mb-4">
                   Además de los derechos reconocidos por la ley y la jurisprudencia, los titulares de la información tendrán derecho a:
