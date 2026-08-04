@@ -3,6 +3,87 @@
 
 <head>
   <meta charset="UTF-8" />
+
+  <!--
+    Redirección de asesores: /asesor?id=<celular> -> https://wa.me/57<celular>?text=...
+
+    Va inline y de primero a propósito: se ejecuta apenas el navegador parsea el <head>,
+    antes de descargar el bundle de React, así la página nunca llega a renderizarse.
+    Los datos y el mensaje viven en /asesores.json (editable sin rebuild).
+  -->
+  <script>
+    (function () {
+      var COUNTRY = "57";
+      var TIMEOUT_MS = 1500; // si el JSON se demora, redirigimos igual con el id de la URL
+      var DEFAULT_MSG = "Hola, quiero más información sobre las ofertas bonificadas de agosto 🐾";
+
+      // "+57 311 529 6631" | "573115296631" | "3115296631" -> "3115296631"
+      function toLocal(value) {
+        var n = String(value == null ? "" : value).replace(/\D/g, "");
+        if (n.length > 10 && n.indexOf(COUNTRY) === 0) n = n.slice(COUNTRY.length);
+        return n;
+      }
+
+      function redirect() {
+        var params = new URLSearchParams(window.location.search);
+        var id = toLocal(params.get("id"));
+        var override = params.get("text") || params.get("msg");
+        var done = false;
+
+        function go(url) {
+          if (done) return;
+          done = true;
+          window.location.replace(url); // replace: no deja la ruta en el historial
+        }
+
+        // Adelanta DNS + TLS de wa.me mientras resolvemos el número.
+        var link = document.createElement("link");
+        link.rel = "preconnect";
+        link.href = "https://wa.me";
+        document.head.appendChild(link);
+
+        function resolve(data) {
+          // Acepta { mensaje, fallback, asesores: [...] } o el array plano.
+          var list = Array.isArray(data) ? data : (data && data.asesores) || [];
+          var msg = override || (data && data.mensaje) || DEFAULT_MSG;
+          var phone = "";
+
+          // 1. El asesor tal como está en el JSON.
+          if (id) {
+            for (var i = 0; i < list.length; i++) {
+              if (toLocal(list[i] && list[i].celular) === id) {
+                phone = toLocal(list[i].celular);
+                break;
+              }
+            }
+          }
+          // 2. El id mismo: cubre un JSON desactualizado o un celular mal cargado.
+          if (phone.length !== 10) phone = id;
+          // 3. El número de respaldo configurado en el JSON, si lo hay.
+          if (phone.length !== 10) phone = toLocal(data && data.fallback);
+          // 4. Nada sirve: a la página principal en vez de abrir un chat roto.
+          if (phone.length !== 10) return go("/");
+
+          go("https://wa.me/" + COUNTRY + phone + "?text=" + encodeURIComponent(msg));
+        }
+
+        setTimeout(function () { resolve(null); }, TIMEOUT_MS);
+
+        fetch("/asesores.json", { cache: "no-cache" })
+          .then(function (res) { return res.ok ? res.json() : null; })
+          .catch(function () { return null; })
+          .then(resolve, function () { resolve(null); });
+      }
+
+      window.__hubuAsesorRedirect = redirect;
+
+      if (/^\/asesor\/?$/i.test(window.location.pathname)) {
+        window.__hubuAsesorRedirecting = true; // main.tsx no monta React en esta ruta
+        redirect();
+      }
+    })();
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hubu - Agentes de IA para clínicas veterinarias</title>
   <meta name="description"

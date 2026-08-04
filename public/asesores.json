@@ -1,0 +1,252 @@
+{
+  "_nota": "Editable en caliente: cambiar este archivo NO requiere rebuild ni deploy del bundle. \"mensaje\" es el texto que se precarga en WhatsApp; \"fallback\" es el celular al que se envia un id desconocido (null = manda a la pagina principal).",
+  "mensaje": "Hola, quiero más información sobre las ofertas bonificadas de agosto 🐾",
+  "fallback": null,
+  "asesores": [
+    {
+      "asesor": "Isabel Cristina Perez Martinez",
+      "celular": "3115296631",
+      "zona": "Asesor Técnico Punto De Venta",
+      "total_clientes_semana": 183,
+      "correo": "asesormostrador10@ivanagro.com"
+    },
+    {
+      "asesor": "Yaneth Rubiela Valencia Giraldo",
+      "celular": "3104963026",
+      "zona": "Asesor Técnico Punto De Venta",
+      "total_clientes_semana": 113,
+      "correo": "asesormostrador8@ivanagro.com"
+    },
+    {
+      "asesor": "Monica Alejandra Arenas Castañeda",
+      "celular": "3104478604",
+      "zona": "Asesor Técnico Punto De Venta",
+      "total_clientes_semana": 92,
+      "correo": "asesormostrador12@ivanagro.com"
+    },
+    {
+      "asesor": "Eliana del Carmen Estrada Correa",
+      "celular": "3167700",
+      "zona": null,
+      "total_clientes_semana": 62,
+      "correo": "asesormostrador15@ivanagro.com"
+    },
+    {
+      "asesor": "Jorge Mesa",
+      "celular": "3146483516",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 57,
+      "correo": "asesorexterno4@ivanagro.com"
+    },
+    {
+      "asesor": "Martin Ocampo",
+      "celular": "3146191140",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 39,
+      "correo": "asesorexterno9@ivanagro.com"
+    },
+    {
+      "asesor": "Maria Fernanda Jimenez Ramirez",
+      "celular": "3127373492",
+      "zona": "Asesor Técnico De Telemercadeo",
+      "total_clientes_semana": 35,
+      "correo": "asesortelemercadeo1@ivanagro.com"
+    },
+    {
+      "asesor": "Ana Maria Jaramillo",
+      "celular": "3115294128",
+      "zona": "Asesor Técnico Punto De Venta",
+      "total_clientes_semana": 28,
+      "correo": "asesormostrador11@ivanagro.com"
+    },
+    {
+      "asesor": "Jose Ignacio Guevara",
+      "celular": "3105211633",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 28,
+      "correo": "asesorexterno6@ivanagro.com"
+    },
+    {
+      "asesor": "Diego Alexander Alvarez Oquendo",
+      "celular": "3127373488",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 24,
+      "correo": "asesorexterno13@ivanagro.com"
+    },
+    {
+      "asesor": "Jaime Alberto Torres",
+      "celular": null,
+      "zona": null,
+      "total_clientes_semana": 22,
+      "correo": null
+    },
+    {
+      "asesor": "Catalina Quiroga",
+      "celular": "3108306871",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 21,
+      "correo": "asesorexterno3@ivanagro.com"
+    },
+    {
+      "asesor": "Jorge Arbey Lopez",
+      "celular": null,
+      "zona": null,
+      "total_clientes_semana": 19,
+      "correo": null
+    },
+    {
+      "asesor": "Dusty Loaniz Ruiz Valencia",
+      "celular": "3019420726",
+      "zona": "Asesor Técnico Punto De Venta",
+      "total_clientes_semana": 17,
+      "correo": "asesormostrador3@ivanagro.com"
+    },
+    {
+      "asesor": "Margarita Maria Hernandez",
+      "celular": "3115302754",
+      "zona": "Asesor Técnico De Telemercadeo",
+      "total_clientes_semana": 17,
+      "correo": "asesortelemercadeo6@ivanagro.com"
+    },
+    {
+      "asesor": "Jaime Alberto Torres Lopez",
+      "celular": "3127514961",
+      "zona": "Asesor Técnico Punto De Venta",
+      "total_clientes_semana": 17,
+      "correo": "asesormostrador5@ivanagro.com"
+    },
+    {
+      "asesor": "Lyda Ivonne Herrera Restrepo",
+      "celular": "3115305552",
+      "zona": "Asesor Técnico Punto De Venta",
+      "total_clientes_semana": 15,
+      "correo": "asesormostrador15@ivanagro.com"
+    },
+    {
+      "asesor": "Julian Montoya",
+      "celular": "3105138314",
+      "zona": "Asesor Técnico De Telemercadeo",
+      "total_clientes_semana": 14,
+      "correo": "asesortelemercadeo3@ivanagro.com"
+    },
+    {
+      "asesor": "Juan Fernando Suarez Diez",
+      "celular": "3146189935",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 13,
+      "correo": "asesorexterno8@ivanagro.com"
+    },
+    {
+      "asesor": "Yolima Sanchez Loaiza",
+      "celular": "3113754930",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 13,
+      "correo": "asesorexterno11@ivanagro.com"
+    },
+    {
+      "asesor": "Silvia Ortega",
+      "celular": "3146189945",
+      "zona": "Asesor Técnico De Telemercadeo",
+      "total_clientes_semana": 10,
+      "correo": "asesortelemercadeo4@ivanagro.com"
+    },
+    {
+      "asesor": "Juan Esteban Jaramillo Hoyos",
+      "celular": "3222499092",
+      "zona": "Asesor Técnico De Telemercadeo",
+      "total_clientes_semana": 8,
+      "correo": "asesortelemercadeo6@ivanagro.com"
+    },
+    {
+      "asesor": "Jorge Lopez",
+      "celular": "3115270075",
+      "zona": "Asesor Técnico Punto De Venta",
+      "total_clientes_semana": 8,
+      "correo": "asesormostrador6@ivanagro.com"
+    },
+    {
+      "asesor": "Dayana Ossa Molina",
+      "celular": "3113462449",
+      "zona": "Asesor Técnico Punto De Venta",
+      "total_clientes_semana": 5,
+      "correo": "asesormostrador12@ivanagro.com"
+    },
+    {
+      "asesor": "Sara Valencia Velásquez",
+      "celular": "3127373492",
+      "zona": "Asesor Técnico De Telemercadeo",
+      "total_clientes_semana": 4,
+      "correo": "asesortelemercadeo2@ivanagro.com"
+    },
+    {
+      "asesor": "Kelly Del Carmen Mendez Jimenez",
+      "celular": "3226202366",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 4,
+      "correo": "asesorexterno12@ivanagro.com"
+    },
+    {
+      "asesor": "David Henao",
+      "celular": "3108319003",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 3,
+      "correo": "asesorexterno5@ivanagro.com"
+    },
+    {
+      "asesor": "Dusty Ruiz",
+      "celular": "3146426238",
+      "zona": "Asesor Técnico Punto De Venta",
+      "total_clientes_semana": 3,
+      "correo": "asesormostrador3@ivanagro.com"
+    },
+    {
+      "asesor": "Kelly del Carmen Mendez Jimenez",
+      "celular": "3226202366",
+      "zona": null,
+      "total_clientes_semana": 3,
+      "correo": "asesorexterno12@ivanagro.com"
+    },
+    {
+      "asesor": "Felipe Uribe",
+      "celular": "3105212683",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 3,
+      "correo": "asesorexterno1@ivanagro.com"
+    },
+    {
+      "asesor": "Carlos Alirio Novoa Espejo",
+      "celular": "3146619463",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 2,
+      "correo": "asesorexterno7@ivanagro.com"
+    },
+    {
+      "asesor": "Victor Franco",
+      "celular": "3104143699",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 1,
+      "correo": "asesorexterno10@ivanagro.com"
+    },
+    {
+      "asesor": "Andres Posada",
+      "celular": "3108222212",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 1,
+      "correo": "asesorexterno2@ivanagro.com"
+    },
+    {
+      "asesor": "Juan Carlos Aristizabal",
+      "celular": "3146619463",
+      "zona": "Asesor Técnico Venta Externa",
+      "total_clientes_semana": 1,
+      "correo": "asesorexterno7@ivanagro.com"
+    },
+    {
+      "asesor": "Jaime Torres",
+      "celular": "3115295348",
+      "zona": "Asesor Técnico Punto De Venta",
+      "total_clientes_semana": 1,
+      "correo": "asesormostrador5@ivanagro.com"
+    }
+  ]
+}
