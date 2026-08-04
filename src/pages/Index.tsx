@@ -96,6 +96,14 @@ const Index = () => {
                 >
                   Sectores
                 </button>
+                <a
+                  href="https://demo.hubu.com.co/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-white transition-colors font-medium"
+                >
+                  Demo
+                </a>
               </nav>
             </div>
 
@@ -159,6 +167,15 @@ const Index = () => {
                 >
                   Sectores
                 </button>
+                <a
+                  href="https://demo.hubu.com.co/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-white/80 hover:text-white transition-colors text-left"
+                >
+                  Demo
+                </a>
 
                 <Button
                   size="lg"
